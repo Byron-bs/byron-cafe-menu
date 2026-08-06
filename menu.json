@@ -1,27 +1,141 @@
 {
   "categorie": {
-    "primi": [
+
+
+    "colazioni": [
+
       {
-        "nome": "Lasagne della casa",
-        "descrizione": "Lasagne al ragù con besciamella",
-        "prezzo": "12,00 €",
-        "foto": "images/piatti/lasagne.jpg"
+        "nome": "Brioche vuota",
+        "descrizione": "Brioche artigianale appena sfornata",
+        "prezzo": "1,50 €"
       },
+
       {
-        "nome": "Tagliatelle al ragù",
-        "descrizione": "Pasta fresca all'uovo con ragù tradizionale",
-        "prezzo": "11,00 €",
-        "foto": "images/piatti/tagliatelle.jpg"
+        "nome": "Brioche farcita",
+        "descrizione": "Disponibile con crema, marmellata o cioccolato",
+        "prezzo": "1,80 €"
       }
+
     ],
 
+
+
+    "caffetteria": [
+
+      {
+        "nome": "Caffè espresso",
+        "descrizione": "Espresso italiano",
+        "prezzo": "1,20 €"
+      },
+
+
+      {
+        "nome": "Cappuccino",
+        "descrizione": "Caffè espresso con latte montato e schiuma cremosa",
+        "prezzo": "1,80 €"
+      },
+
+
+      {
+        "nome": "Caffè decaffeinato",
+        "descrizione": "Decaffeinato preparato al momento",
+        "prezzo": "1,30 €"
+      }
+
+
+    ],
+
+
+
+    "aperitivi": [
+
+      {
+        "nome": "Aperitivo BYRON",
+        "descrizione": "Drink accompagnato da selezione di stuzzichini",
+        "prezzo": "8,00 €"
+      }
+
+    ],
+
+
+
+    "bevande": [
+
+      {
+        "nome": "Acqua naturale",
+        "descrizione": "Bottiglia 0,5 L",
+        "prezzo": "1,00 €"
+      },
+
+
+      {
+        "nome": "Bibita",
+        "descrizione": "Coca Cola, Fanta o Sprite",
+        "prezzo": "3,00 €"
+      }
+
+    ],
+
+
+
+    "primi": [
+
+      {
+        "nome": "Lasagne della casa",
+        "descrizione": "Sfoglia all'uovo, ragù tradizionale e besciamella",
+        "prezzo": "12,00 €"
+      }
+
+    ],
+
+
+
+    "secondi": [
+
+      {
+        "nome": "Secondo del giorno",
+        "descrizione": "Proposta della cucina BYRON Caffè",
+        "prezzo": "14,00 €"
+      }
+
+    ],
+
+
+
+    "insalatone": [
+
+      {
+        "nome": "Insalatona BYRON",
+        "descrizione": "Insalata fresca con ingredienti selezionati",
+        "prezzo": "10,00 €"
+      }
+
+    ],
+
+
+
+    "panini": [
+
+      {
+        "nome": "Panino della casa",
+        "descrizione": "Panino preparato con ingredienti freschi",
+        "prezzo": "7,00 €"
+      }
+
+    ],
+
+
+
     "dessert": [
+
       {
         "nome": "Tiramisù della casa",
         "descrizione": "Crema al mascarpone e caffè",
-        "prezzo": "5,00 €",
-        "foto": "images/piatti/tiramisu.jpg"
+        "prezzo": "5,00 €"
       }
+
     ]
+
+
   }
 }

@@ -1,59 +1,172 @@
-const categories = document.querySelector(".categories");
-const container = document.querySelector(".menu-container");
+const buttons = document.querySelectorAll("button[data-category]");
+
+const home = document.getElementById("home");
+
+const products = document.getElementById("products");
+
 
 
 fetch("menu.json")
+
 .then(response => response.json())
-.then(data => {
+
+.then(menu => {
 
 
-    const buttons = document.querySelectorAll(".categories button");
+
+    buttons.forEach(button => {
 
 
-    buttons[2].onclick = () => showCategory("primi", data);
 
-    buttons[6].onclick = () => showCategory("dessert", data);
-
-
-});
+        button.addEventListener("click", () => {
 
 
-function showCategory(category, data){
+
+            const category = button.dataset.category;
 
 
-    let html = `
-        <h2>${category.toUpperCase()}</h2>
-    `;
+
+            showCategory(category, menu);
 
 
-    data.categorie[category].forEach(item => {
+
+        });
 
 
-        html += `
-
-        <div class="dish">
-
-            <h3>${item.nome}</h3>
-
-            <p>${item.descrizione}</p>
-
-            <strong>${item.prezzo}</strong>
-
-        </div>
-
-        `;
 
     });
 
 
 
-    html += `
-        <button onclick="location.reload()">
-        ⬅ Torna al menù
-        </button>
+});
+
+
+
+
+function showCategory(category, menu) {
+
+
+
+    home.style.display = "none";
+
+    products.classList.remove("hidden");
+
+
+
+    let html = `
+
+
+
+    <div class="category-title">
+
+
+        <div class="music">
+            ♪
+        </div>
+
+
+        <h2>${category}</h2>
+
+
+    </div>
+
+
     `;
 
 
-    categories.innerHTML = html;
+
+    if(menu.categorie[category]) {
+
+
+
+        menu.categorie[category].forEach(product => {
+
+
+
+            html += `
+
+
+
+            <div class="product-card">
+
+
+                <div class="product-image">
+
+                    Foto prodotto
+
+                </div>
+
+
+
+                <div class="product-content">
+
+
+                    <h3>${product.nome}</h3>
+
+
+                    <p>${product.descrizione}</p>
+
+
+                    <div class="price">
+
+                        ${product.prezzo}
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+            `;
+
+
+
+        });
+
+
+
+    }
+
+
+
+    html += `
+
+
+    <button class="back-button" id="back">
+
+        ← Torna al menù
+
+    </button>
+
+
+    `;
+
+
+
+    products.innerHTML = html;
+
+
+
+    document
+    .getElementById("back")
+    .addEventListener("click", () => {
+
+
+
+        products.classList.add("hidden");
+
+        home.style.display = "block";
+
+
+
+    });
+
+
 
 }

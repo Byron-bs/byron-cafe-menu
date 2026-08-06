@@ -1,145 +1,377 @@
 * {
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
+
 
 
 body {
+
     min-height: 100vh;
-    background: #f5efe6;
+
+    background: #f3eadf;
+
     font-family: "Georgia", serif;
-    color: #4b3526;
+
+    color: #4b3425;
 
     display: flex;
+
     justify-content: center;
-    align-items: center;
 
     padding: 20px;
-}
-
-
-.menu-container {
-
-    width: 100%;
-    max-width: 430px;
-
-    background: #fffaf3;
-
-    border-radius: 25px;
-
-    padding: 35px 25px;
-
-    box-shadow: 0 10px 30px rgba(80, 55, 35, 0.15);
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-
-
-header {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-
-
-header h1 {
-
-    font-size: 38px;
-
-    color: #6b4630;
-
-    letter-spacing: 2px;
 
 }
 
 
 
-header p {
+.app {
 
-    margin-top: 8px;
+    width:100%;
 
-    font-size: 16px;
+    max-width:430px;
 
-    color: #8b6b55;
+    background:#fffaf4;
 
-}
+    border-radius:30px;
 
+    padding:30px 22px;
 
-
-.music-decoration {
-
-    position: absolute;
-
-    right: 25px;
-    top: 20px;
-
-    font-size: 55px;
-
-    color: rgba(120, 90, 70, 0.12);
+    box-shadow:
+    0 15px 35px rgba(80,50,30,0.15);
 
 }
 
 
 
-.categories {
+/* LOGO */
 
-    display: flex;
+.logo {
 
-    flex-direction: column;
+    text-align:center;
 
-    gap: 14px;
-
-}
-
-
-
-.categories button {
-
-
-    border: none;
-
-    background: #c9a77d;
-
-    color: white;
-
-    padding: 16px;
-
-    border-radius: 30px;
-
-    font-size: 17px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-
-    font-family: inherit;
+    margin-bottom:25px;
 
 }
 
 
 
-.categories button:hover {
+.music {
 
-    background: #a9845c;
+    font-size:55px;
 
-    transform: translateY(-2px);
+    color:#d5bfa6;
 
 }
+
+
+
+.logo h1 {
+
+    font-size:42px;
+
+    letter-spacing:6px;
+
+    color:#6b4630;
+
+}
+
+
+
+.logo h2 {
+
+    font-size:32px;
+
+    font-weight:normal;
+
+    font-style:italic;
+
+    color:#a67c52;
+
+}
+
+
+
+.logo p {
+
+    margin-top:8px;
+
+    color:#80614a;
+
+}
+
+
+
+
+
+/* FOTO COPERTINA */
+
+
+.cover {
+
+    height:170px;
+
+    border-radius:22px;
+
+    background:#efe1d0;
+
+    border:2px dashed #c9a77d;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#b08b65;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+/* SEZIONI */
+
+
+section {
+
+    margin-bottom:35px;
+
+}
+
+
+
+section h3 {
+
+    text-align:center;
+
+    font-size:22px;
+
+    color:#6b4630;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+button {
+
+
+    width:100%;
+
+
+    border:none;
+
+
+    padding:16px;
+
+
+    margin-bottom:12px;
+
+
+    border-radius:30px;
+
+
+    background:#c9a77d;
+
+
+    color:white;
+
+
+    font-family:inherit;
+
+
+    font-size:17px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+button:hover {
+
+    background:#a67c52;
+
+    transform:translateY(-2px);
+
+}
+
+
 
 
 
 footer {
 
-    text-align: center;
+    text-align:center;
 
-    margin-top: 30px;
+    margin-top:20px;
 
-    font-size: 13px;
+    color:#98785c;
 
-    color: #9b8068;
+    font-size:13px;
+
+}
+
+
+
+
+
+/* PAGINA PRODOTTI */
+
+
+.hidden {
+
+    display:none;
+
+}
+
+
+
+
+.category-title {
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.category-title h2 {
+
+    color:#6b4630;
+
+    font-size:28px;
+
+}
+
+
+
+.product-card {
+
+
+    background:#fffaf4;
+
+
+    border-radius:22px;
+
+
+    overflow:hidden;
+
+
+    margin-bottom:20px;
+
+
+    box-shadow:
+    0 8px 20px rgba(80,50,30,0.12);
+
+
+}
+
+
+
+.product-image {
+
+
+    height:160px;
+
+
+    background:#efe1d0;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    color:#b08b65;
+
+
+}
+
+
+
+.product-content {
+
+
+    padding:18px;
+
+
+}
+
+
+
+.product-content h3 {
+
+
+    color:#6b4630;
+
+    margin-bottom:8px;
+
+    font-size:20px;
+
+
+}
+
+
+
+.product-content p {
+
+
+    color:#80614a;
+
+    font-size:15px;
+
+    line-height:1.4;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.price {
+
+
+    text-align:right;
+
+    font-size:21px;
+
+    font-weight:bold;
+
+    color:#a67c52;
+
+}
+
+
+
+
+.back-button {
+
+
+    background:#6b4630;
+
+    margin-top:15px;
+
 
 }
