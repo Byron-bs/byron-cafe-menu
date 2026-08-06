@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    background: #f5efe6;
+    font-family: "Georgia", serif;
+    color: #4b3526;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+.menu-container {
+
+    width: 100%;
+    max-width: 430px;
+
+    background: #fffaf3;
+
+    border-radius: 25px;
+
+    padding: 35px 25px;
+
+    box-shadow: 0 10px 30px rgba(80, 55, 35, 0.15);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+
+header h1 {
+
+    font-size: 38px;
+
+    color: #6b4630;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+header p {
+
+    margin-top: 8px;
+
+    font-size: 16px;
+
+    color: #8b6b55;
+
+}
+
+
+
+.music-decoration {
+
+    position: absolute;
+
+    right: 25px;
+    top: 20px;
+
+    font-size: 55px;
+
+    color: rgba(120, 90, 70, 0.12);
+
+}
+
+
+
+.categories {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+
+.categories button {
+
+
+    border: none;
+
+    background: #c9a77d;
+
+    color: white;
+
+    padding: 16px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    font-family: inherit;
+
+}
+
+
+
+.categories button:hover {
+
+    background: #a9845c;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+footer {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-size: 13px;
+
+    color: #9b8068;
+
+}

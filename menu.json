@@ -1,0 +1,27 @@
+{
+  "categorie": {
+    "primi": [
+      {
+        "nome": "Lasagne della casa",
+        "descrizione": "Lasagne al ragù con besciamella",
+        "prezzo": "12,00 €",
+        "foto": "images/piatti/lasagne.jpg"
+      },
+      {
+        "nome": "Tagliatelle al ragù",
+        "descrizione": "Pasta fresca all'uovo con ragù tradizionale",
+        "prezzo": "11,00 €",
+        "foto": "images/piatti/tagliatelle.jpg"
+      }
+    ],
+
+    "dessert": [
+      {
+        "nome": "Tiramisù della casa",
+        "descrizione": "Crema al mascarpone e caffè",
+        "prezzo": "5,00 €",
+        "foto": "images/piatti/tiramisu.jpg"
+      }
+    ]
+  }
+}
