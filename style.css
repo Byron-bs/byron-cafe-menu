@@ -1,377 +1,226 @@
 * {
-
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
-
-
 
 body {
-
     min-height: 100vh;
-
     background: #f3eadf;
-
     font-family: "Georgia", serif;
-
     color: #4b3425;
-
     display: flex;
-
     justify-content: center;
-
     padding: 20px;
-
 }
-
-
 
 .app {
-
-    width:100%;
-
-    max-width:430px;
-
-    background:#fffaf4;
-
-    border-radius:30px;
-
-    padding:30px 22px;
-
-    box-shadow:
-    0 15px 35px rgba(80,50,30,0.15);
-
+    width: 100%;
+    max-width: 430px;
+    background: #fffaf4;
+    border-radius: 30px;
+    padding: 30px 22px;
+    box-shadow: 0 15px 35px rgba(80, 50, 30, 0.15);
 }
-
 
 
 /* LOGO */
 
 .logo {
-
-    text-align:center;
-
-    margin-bottom:25px;
-
+    text-align: center;
+    margin-bottom: 25px;
 }
-
-
 
 .music {
-
-    font-size:55px;
-
-    color:#d5bfa6;
-
+    font-size: 55px;
+    color: #d5bfa6;
 }
-
-
 
 .logo h1 {
-
-    font-size:42px;
-
-    letter-spacing:6px;
-
-    color:#6b4630;
-
+    font-size: 42px;
+    letter-spacing: 6px;
+    color: #6b4630;
 }
-
-
 
 .logo h2 {
-
-    font-size:32px;
-
-    font-weight:normal;
-
-    font-style:italic;
-
-    color:#a67c52;
-
+    font-size: 32px;
+    font-weight: normal;
+    font-style: italic;
+    color: #a67c52;
 }
-
-
 
 .logo p {
-
-    margin-top:8px;
-
-    color:#80614a;
-
+    margin-top: 8px;
+    color: #80614a;
 }
-
-
-
 
 
 /* FOTO COPERTINA */
 
-
 .cover {
-
-    height:170px;
-
-    border-radius:22px;
-
-    background:#efe1d0;
-
-    border:2px dashed #c9a77d;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:#b08b65;
-
-    margin-bottom:30px;
-
+    height: 170px;
+    border-radius: 22px;
+    background: #efe1d0;
+    border: 2px dashed #c9a77d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b08b65;
+    margin-bottom: 30px;
 }
 
 
-
-
-
-/* SEZIONI */
-
+/* SEZIONI HOME */
 
 section {
-
-    margin-bottom:35px;
-
+    margin-bottom: 35px;
 }
-
-
 
 section h3 {
-
-    text-align:center;
-
-    font-size:22px;
-
-    color:#6b4630;
-
-    margin-bottom:15px;
-
+    text-align: center;
+    font-size: 22px;
+    color: #6b4630;
+    margin-bottom: 15px;
 }
-
-
-
 
 button {
-
-
-    width:100%;
-
-
-    border:none;
-
-
-    padding:16px;
-
-
-    margin-bottom:12px;
-
-
-    border-radius:30px;
-
-
-    background:#c9a77d;
-
-
-    color:white;
-
-
-    font-family:inherit;
-
-
-    font-size:17px;
-
-
-    cursor:pointer;
-
-
-    transition:.3s;
-
-
+    width: 100%;
+    border: none;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 30px;
+    background: #c9a77d;
+    color: white;
+    font-family: inherit;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
 }
-
-
 
 button:hover {
-
-    background:#a67c52;
-
-    transform:translateY(-2px);
-
+    background: #a67c52;
+    transform: translateY(-2px);
 }
-
-
-
-
 
 footer {
-
-    text-align:center;
-
-    margin-top:20px;
-
-    color:#98785c;
-
-    font-size:13px;
-
+    text-align: center;
+    margin-top: 20px;
+    color: #98785c;
+    font-size: 13px;
 }
-
-
-
 
 
 /* PAGINA PRODOTTI */
 
-
 .hidden {
-
-    display:none;
-
+    display: none;
 }
-
-
-
 
 .category-title {
-
-    text-align:center;
-
-    margin-bottom:25px;
-
+    text-align: center;
+    margin-bottom: 25px;
 }
-
-
 
 .category-title h2 {
-
-    color:#6b4630;
-
-    font-size:28px;
-
+    color: #6b4630;
+    font-size: 28px;
+    text-transform: uppercase;
 }
 
 
+/* SCHEDA PRODOTTO */
 
 .product-card {
-
-
-    background:#fffaf4;
-
-
-    border-radius:22px;
-
-
-    overflow:hidden;
-
-
-    margin-bottom:20px;
-
-
-    box-shadow:
-    0 8px 20px rgba(80,50,30,0.12);
-
-
+    background: #fffaf4;
+    border-radius: 22px;
+    overflow: hidden;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 20px rgba(80, 50, 30, 0.12);
 }
 
 
+/* =========================================
+ /* FOTO PRODOTTO */
 
 .product-image {
-
-
-    height:160px;
-
-
-    background:#efe1d0;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    color:#b08b65;
-
-
+    width: 100%;
+    height: 320px;
+    background: #efe1d0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b08b65;
 }
 
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
 
+/* TESTO PRODOTTO */
 
 .product-content {
-
-
-    padding:18px;
-
-
+    padding: 18px;
 }
-
-
 
 .product-content h3 {
-
-
-    color:#6b4630;
-
-    margin-bottom:8px;
-
-    font-size:20px;
-
-
+    color: #6b4630;
+    margin-bottom: 8px;
+    font-size: 20px;
 }
-
-
 
 .product-content p {
-
-
-    color:#80614a;
-
-    font-size:15px;
-
-    line-height:1.4;
-
-    margin-bottom:15px;
-
-
+    color: #80614a;
+    font-size: 15px;
+    line-height: 1.45;
+    margin-bottom: 12px;
 }
-
-
 
 .price {
-
-
-    text-align:right;
-
-    font-size:21px;
-
-    font-weight:bold;
-
-    color:#a67c52;
-
+    text-align: right;
+    font-size: 21px;
+    font-weight: bold;
+    color: #a67c52;
+    margin-top: 10px;
 }
 
 
+/* CAFFETTERIA SENZA FOTO */
 
+.coffee-card {
+    padding: 0;
+    margin-bottom: 10px;
+    border-radius: 14px;
+}
+
+.coffee-content {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.coffee-content h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.coffee-content .price {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+
+/* PULSANTE INDIETRO */
 
 .back-button {
-
-
-    background:#6b4630;
-
-    margin-top:15px;
-
-
+    background: #6b4630;
+    margin-top: 15px;
 }
