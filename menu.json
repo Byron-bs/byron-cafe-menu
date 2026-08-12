@@ -20,43 +20,153 @@
 
 
 
-    "caffetteria": [
+   "caffetteria": [
 
-      {
-        "nome": "Caffè espresso",
-        "descrizione": "Espresso italiano",
-        "prezzo": "1,20 €"
-      },
+  {
+    "nome": "Caffè espresso",
+    "descrizione": "",
+    "prezzo": "1,30 €"
+  },
 
+  {
+    "nome": "Caffè decaffeinato",
+    "descrizione": "",
+    "prezzo": "1,40 €"
+  },
 
-      {
-        "nome": "Cappuccino",
-        "descrizione": "Caffè espresso con latte montato e schiuma cremosa",
-        "prezzo": "1,80 €"
-      },
+  {
+    "nome": "Caffè corretto",
+    "descrizione": "",
+    "prezzo": "1,70 €"
+  },
 
+  {
+    "nome": "Caffè freddo shakerato",
+    "descrizione": "",
+    "prezzo": "3,00 €"
+  },
 
-      {
-        "nome": "Caffè decaffeinato",
-        "descrizione": "Decaffeinato preparato al momento",
-        "prezzo": "1,30 €"
-      }
+  {
+    "nome": "Caffè freddo shakerato con Baileys",
+    "descrizione": "",
+    "prezzo": "3,50 €"
+  },
 
+  {
+    "nome": "Caffè d'orzo piccolo",
+    "descrizione": "",
+    "prezzo": "1,50 €"
+  },
 
-    ],
+  {
+    "nome": "Caffè d'orzo grande",
+    "descrizione": "",
+    "prezzo": "2,00 €"
+  },
 
+  {
+    "nome": "Caffè al ginseng",
+    "descrizione": "",
+    "prezzo": "1,60 €"
+  },
 
+  {
+    "nome": "Caffè al ginseng grande",
+    "descrizione": "",
+    "prezzo": "2,00 €"
+  },
 
-    "aperitivi": [
+  {
+    "nome": "Macchiatone",
+    "descrizione": "",
+    "prezzo": "1,50 €"
+  },
 
-      {
-        "nome": "Aperitivo BYRON",
-        "descrizione": "Drink accompagnato da selezione di stuzzichini",
-        "prezzo": "8,00 €"
-      }
+  {
+    "nome": "Macchiatone decaffeinato",
+    "descrizione": "",
+    "prezzo": "1,60 €"
+  },
 
-    ],
+  {
+    "nome": "Marocchino",
+    "descrizione": "",
+    "prezzo": "1,60 €"
+  },
 
+  {
+    "nome": "Cappuccino",
+    "descrizione": "",
+    "prezzo": "1,80 €"
+  },
+
+  {
+    "nome": "Cappuccino decaffeinato",
+    "descrizione": "",
+    "prezzo": "1,90 €"
+  },
+
+  {
+    "nome": "Cappuccino al ginseng",
+    "descrizione": "",
+    "prezzo": "2,00 €"
+  },
+
+  {
+    "nome": "Cappuccino d'orzo",
+    "descrizione": "",
+    "prezzo": "2,00 €"
+  },
+
+  {
+    "nome": "Latte",
+    "descrizione": "",
+    "prezzo": "1,60 €"
+  },
+
+  {
+    "nome": "Latte macchiato",
+    "descrizione": "",
+    "prezzo": "2,50 €"
+  },
+
+  {
+    "nome": "Cioccolata calda",
+    "descrizione": "",
+    "prezzo": "3,00 €"
+  },
+
+  {
+    "nome": "Cioccolata calda con panna",
+    "descrizione": "",
+    "prezzo": "4,00 €"
+  },
+
+  {
+    "nome": "Tè caldo",
+    "descrizione": "",
+    "prezzo": "2,50 €"
+  },
+
+  {
+    "nome": "Brioches",
+    "descrizione": "",
+    "prezzo": "1,50 €"
+  },
+
+  {
+    "nome": "Fetta di torta",
+    "descrizione": "",
+    "prezzo": "4,00 €"
+  },
+
+  {
+    "nome": "Frolle e cannoncini",
+    "descrizione": "",
+    "prezzo": "2,50 €"
+  }
+
+],
 
 
     "bevande": [
