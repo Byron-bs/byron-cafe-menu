@@ -1,18 +1,27 @@
 const buttons = document.querySelectorAll("button[data-category]");
-
 const home = document.getElementById("home");
-
 const products = document.getElementById("products");
+
+let menuData = null;
 
 fetch("menu.json")
 .then(response => response.json())
 .then(menu => {
+
+    menuData = menu;
 
     buttons.forEach(button => {
 
         button.addEventListener("click", () => {
 
             const category = button.dataset.category;
+
+            // Aggiunge la categoria alla cronologia del browser
+            history.pushState(
+                { category: category },
+                "",
+                `#${category}`
+            );
 
             showCategory(category, menu);
 
@@ -25,7 +34,6 @@ fetch("menu.json")
 function showCategory(category, menu) {
 
     home.style.display = "none";
-
     products.classList.remove("hidden");
 
     let html = `
@@ -72,12 +80,15 @@ function showCategory(category, menu) {
 
                 <div class="product-card">
 
-  <div class="product-image">
-    ${product.immagine 
-        ? `<img src="${product.immagine}" alt="${product.nome}">`
-        : `Foto prodotto`
-    }
-</div>
+                    <div class="product-image">
+
+                        ${
+                            product.immagine
+                            ? `<img src="${product.immagine}" alt="${product.nome}">`
+                            : `Foto prodotto`
+                        }
+
+                    </div>
 
                     <div class="product-content">
 
@@ -115,10 +126,55 @@ function showCategory(category, menu) {
     .getElementById("back")
     .addEventListener("click", () => {
 
-        products.classList.add("hidden");
-
-        home.style.display = "block";
+        // Usa la cronologia invece di mostrare
+        // direttamente la home
+        history.back();
 
     });
 
 }
+
+
+/* TORNA ALLA HOME */
+
+function showHome() {
+
+    products.classList.add("hidden");
+    home.style.display = "block";
+
+    // Torna in cima alla pagina
+    window.scrollTo(0, 0);
+
+}
+
+
+/* GESTIONE TASTO INDIETRO DEL BROWSER / TELEFONO */
+
+window.addEventListener("popstate", event => {
+
+    if(event.state && event.state.category && menuData) {
+
+        showCategory(event.state.category, menuData);
+
+    } else {
+
+        showHome();
+
+    }
+
+});
+
+
+/* SE LA PAGINA VIENE APERTA CON UNA CATEGORIA NELL'URL */
+
+window.addEventListener("load", () => {
+
+    const category = window.location.hash.replace("#", "");
+
+    if(category && menuData && menuData.categorie[category]) {
+
+        showCategory(category, menuData);
+
+    }
+
+});
