@@ -188,40 +188,272 @@
 
 
 
-    "primi": [
+"primi": [
 
-      {
-        "nome": "Lasagne della casa",
-        "descrizione": "Sfoglia all'uovo, ragù tradizionale e besciamella",
-        "prezzo": "12,00 €"
-      }
+  {
+    "nome": "Garganelli gamberi e zucchine",
+    "descrizione": "",
+    "prezzo": ""
+  },
 
-    ],
+  {
+    "nome": "Garganelli panna e salmone",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Pappardelle ai funghi",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Penne all’arrabbiata",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Spaghetti cacio e pepe",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Spaghetti alla carbonara",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Lasagne alla bolognese",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Risotto agli asparagi",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Risotto allo zafferano",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Risotto ai funghi",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Pasta al pomodoro",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Lunette speck e Brie",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Tortellini panna e prosciutto",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Riso freddo classico",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Pasta fredda con rucola e salmone",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Pasta fredda integrale pomodori, olive nere e tonno",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Insalata di farro",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Spätzle panna e speck",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Pizzoccheri della Valtellina",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Lasagne vegetariane",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Lasagne al pesto",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Crespelle prosciutto e formaggio",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Crespelle al salmone",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Crespelle ai funghi",
+    "descrizione": "",
+    "prezzo": ""
+  }
+
+],
+
+
+"secondi": [
+
+  {
+    "nome": "Carne tonnata",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Cotoletta alla milanese",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Hamburger di manzo alla griglia",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Scaloppe al vino bianco",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Scaloppe al limone",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Scaloppe ai funghi",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Scaloppe agli asparagi",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Melanzane alla parmigiana",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Bresaola rucola e grana",
+    "descrizione": "",
+    "prezzo": ""
+  },
+
+  {
+    "nome": "Crudo e melone",
+    "descrizione": "",
+    "prezzo": ""
+  }
+
+],
 
 
 
-    "secondi": [
+"insalatone": [
 
-      {
-        "nome": "Secondo del giorno",
-        "descrizione": "Proposta della cucina BYRON Caffè",
-        "prezzo": "14,00 €"
-      }
+  {
+    "nome": "Adagio",
+    "descrizione": "Misticanza, bresaola, grana, pomodorini e noci",
+    "prezzo": "11,00 €"
+  },
 
-    ],
+  {
+    "nome": "Andante",
+    "descrizione": "Insalata, tagliata di pollo, mais, pomodorini, mozzarella e olive",
+    "prezzo": "11,00 €"
+  },
 
+  {
+    "nome": "Serenata",
+    "descrizione": "Misticanza, salmone affumicato, pomodorini, capperi e mais",
+    "prezzo": "12,00 €"
+  },
 
+  {
+    "nome": "Notturno",
+    "descrizione": "Insalata, speck, pere, scamorza affumicata e noci",
+    "prezzo": "11,00 €"
+  },
 
-    "insalatone": [
+  {
+    "nome": "Rapsodia",
+    "descrizione": "Misticanza, mozzarella, pomodorini, carciofi e olive",
+    "prezzo": "9,50 €"
+  },
 
-      {
-        "nome": "Insalatona BYRON",
-        "descrizione": "Insalata fresca con ingredienti selezionati",
-        "prezzo": "10,00 €"
-      }
+  {
+    "nome": "Sinfonia",
+    "descrizione": "Insalata, tonno, mozzarella, olive, capperi e peperoni",
+    "prezzo": "10,00 €"
+  },
 
-    ],
+  {
+    "nome": "Arpeggio",
+    "descrizione": "Patate, fagiolini, carote, spinaci lessati, edamer e prosciutto cotto a dadini (disponibile solo in stagione)",
+    "prezzo": "10,00 €"
+  },
 
+  {
+    "nome": "Ballata",
+    "descrizione": "Insalata, carote, pomodori, finocchi, zucchine a carpaccio al limone e mozzarella",
+    "prezzo": "9,50 €"
+  }
+
+],
 
 
 "panini": [
