@@ -224,16 +224,72 @@
 
 
 
-    "panini": [
+"panini": [
 
-      {
-        "nome": "Panino della casa",
-        "descrizione": "Panino preparato con ingredienti freschi",
-        "prezzo": "7,00 €"
-      }
+  {
+    "nome": "MARINO FALIERO",
+    "descrizione": "Prosciutto cotto, fontina, insalata e maionese",
+    "prezzo": "5,80 €",
+    "immagine": "images/panini/marino-faliero.jpg"
+  },
 
-    ],
+  {
+    "nome": "PARISINA",
+    "descrizione": "Speck, brie e funghi",
+    "prezzo": "6,00 €",
+    "immagine": "images/panini/parisina.jpg"
+  },
 
+  {
+    "nome": "HAROLD",
+    "descrizione": "Tonno, mozzarella, pomodori, peperoni e insalata",
+    "prezzo": "6,00 €",
+    "immagine": "images/panini/harold.jpg"
+  },
+
+  {
+    "nome": "MANFRED",
+    "descrizione": "Cotoletta, fontina, maionese e insalata",
+    "prezzo": "6,80 €",
+    "immagine": "images/panini/manfred.jpg"
+  },
+
+  {
+    "nome": "DON JUAN",
+    "descrizione": "Hamburger, pomodori, fontina e maionese",
+    "prezzo": "6,90 €",
+    "immagine": "images/panini/don-juan.jpg"
+  },
+
+  {
+    "nome": "MAZEPPA",
+    "descrizione": "Pomodoro, mozzarella, origano e insalata",
+    "prezzo": "5,70 €",
+    "immagine": "images/panini/mazeppa.jpg"
+  },
+
+  {
+    "nome": "SARDANAPALO",
+    "descrizione": "Tacchino, fontina, carciofi e salsa rosa",
+    "prezzo": "6,50 €",
+    "immagine": "images/panini/sardanapalo.jpg"
+  },
+
+  {
+    "nome": "LA CORSARA",
+    "descrizione": "Bresaola, scaglie di grana, noci e rucola",
+    "prezzo": "7,00 €",
+    "immagine": "images/panini/la-corsara.jpg"
+  },
+
+  {
+    "nome": "LARA",
+    "descrizione": "Salmone affumicato, pomodorini e rucola",
+    "prezzo": "7,00 €",
+    "immagine": "images/panini/lara.jpg"
+  }
+
+],
 
 
     "dessert": [
