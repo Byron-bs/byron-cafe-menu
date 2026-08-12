@@ -72,9 +72,12 @@ function showCategory(category, menu) {
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        Foto prodotto
-                    </div>
+  <div class="product-image">
+    ${product.immagine 
+        ? `<img src="${product.immagine}" alt="${product.nome}">`
+        : `Foto prodotto`
+    }
+</div>
 
                     <div class="product-content">
 
