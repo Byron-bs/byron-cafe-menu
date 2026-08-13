@@ -4,121 +4,398 @@
     padding: 0;
 }
 
+:root {
+    --espresso: #4b3425;
+    --brown: #76513c;
+    --rose: #f1d8cf;
+    --cream: #fffaf4;
+    --sage: #92977d;
+    --sage-dark: #7f856c;
+    --beige: #d8b99f;
+}
+
+html {
+    min-height: 100%;
+    background: #f3eadf;
+}
+
 body {
     min-height: 100vh;
-    background: #f3eadf;
-    font-family: "Georgia", serif;
-    color: #4b3425;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     padding: 20px;
+    background: #f3eadf;
+    color: var(--espresso);
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .app {
     width: 100%;
     max-width: 430px;
-    background: #fffaf4;
+    background: var(--cream);
     border-radius: 30px;
     padding: 30px 22px;
     box-shadow: 0 15px 35px rgba(80, 50, 30, 0.15);
 }
 
-
-/* LOGO */
-
-.logo {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.music {
-    font-size: 55px;
-    color: #d5bfa6;
-}
-
-.logo h1 {
-    font-size: 42px;
-    letter-spacing: 6px;
-    color: #6b4630;
-}
-
-.logo h2 {
-    font-size: 32px;
-    font-weight: normal;
-    font-style: italic;
-    color: #a67c52;
-}
-
-.logo p {
-    margin-top: 8px;
-    color: #80614a;
-}
-
-
-/* FOTO COPERTINA */
-
-.cover {
-    height: 170px;
-    border-radius: 22px;
-    background: #efe1d0;
-    border: 2px dashed #c9a77d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #b08b65;
-    margin-bottom: 30px;
-}
-
-
-/* SEZIONI HOME */
-
-section {
-    margin-bottom: 35px;
-}
-
-section h3 {
-    text-align: center;
-    font-size: 22px;
-    color: #6b4630;
-    margin-bottom: 15px;
+.hidden {
+    display: none !important;
 }
 
 button {
-    width: 100%;
-    border: none;
-    padding: 16px;
-    margin-bottom: 12px;
-    border-radius: 30px;
-    background: #c9a77d;
-    color: white;
-    font-family: inherit;
-    font-size: 17px;
+    font: inherit;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #a67c52;
-    transform: translateY(-2px);
 }
 
 footer {
-    text-align: center;
     margin-top: 20px;
     color: #98785c;
     font-size: 13px;
+    text-align: center;
 }
 
+/* HOME E INDICI — IDENTITÀ BYRON */
 
-/* PAGINA PRODOTTI */
+body.landing-page,
+body.menu-index-page {
+    min-height: 100svh;
+    padding: 0;
+    background: #efd8cf;
+}
 
-.hidden {
-    display: none;
+body.landing-page .app,
+body.menu-index-page .app {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    min-height: 100svh;
+    overflow: hidden;
+    border-radius: 0;
+    padding: 0;
+    background:
+        radial-gradient(circle at 92% 16%, transparent 0 58px, rgba(164, 109, 91, .13) 59px 60px, transparent 61px 78px, rgba(164, 109, 91, .10) 79px 80px, transparent 81px),
+        radial-gradient(circle at 3% 58%, transparent 0 66px, rgba(164, 109, 91, .11) 67px 68px, transparent 69px 88px, rgba(164, 109, 91, .08) 89px 90px, transparent 91px),
+        repeating-linear-gradient(12deg, transparent 0 76px, rgba(177, 112, 94, .08) 77px 78px, transparent 79px 96px),
+        linear-gradient(135deg, #efd0c5 0%, #fff8f2 48%, #f6ddd4 100%);
+    box-shadow: none;
+}
+
+body.landing-page .app::before,
+body.menu-index-page .app::before {
+    content: "♪   ♫";
+    position: absolute;
+    inset: auto auto 4% -3%;
+    color: rgba(168, 103, 88, .10);
+    font-size: 100px;
+    letter-spacing: 40px;
+    transform: rotate(-10deg);
+    pointer-events: none;
+}
+
+.home-screen {
+    position: relative;
+    z-index: 1;
+    min-height: 100svh;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    align-items: center;
+    gap: 18px;
+    padding: clamp(24px, 5svh, 54px) clamp(20px, 7vw, 42px);
+}
+
+.home-choice {
+    width: 100%;
+}
+
+.home-choice-top {
+    align-self: end;
+}
+
+.home-choice-bottom {
+    align-self: start;
+}
+
+.gateway-button {
+    width: 100%;
+    min-height: clamp(172px, 24svh, 248px);
+    display: grid;
+    grid-template-columns: 1fr 48px;
+    align-items: center;
+    gap: 10px;
+    border: 1.5px solid var(--brown);
+    border-radius: 28px;
+    padding: 24px 20px 22px 26px;
+    background: rgba(255, 250, 244, .54);
+    color: var(--espresso);
+    box-shadow: 0 8px 18px rgba(83, 55, 40, .035);
+    text-align: center;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.gateway-button:active {
+    transform: scale(.985);
+    background: rgba(255, 250, 244, .72);
+}
+
+.gateway-copy {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gateway-copy strong {
+    font-size: clamp(32px, 9vw, 48px);
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: .04em;
+}
+
+.gateway-copy em {
+    margin-top: 13px;
+    color: #956d59;
+    font-size: clamp(15px, 4.2vw, 21px);
+    line-height: 1.2;
+}
+
+.gateway-copy small {
+    margin-top: 22px;
+    color: var(--sage-dark);
+    font-family: Arial, sans-serif;
+    font-size: clamp(11px, 3vw, 15px);
+    letter-spacing: .19em;
+}
+
+.gateway-arrow,
+.section-link i {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--sage);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.brand {
+    position: relative;
+    color: var(--espresso);
+    text-align: center;
+}
+
+.brand h1 {
+    font-size: clamp(50px, 15vw, 82px);
+    font-weight: normal;
+    line-height: .94;
+    letter-spacing: .16em;
+    transform: translateX(.08em);
+}
+
+.brand-caffe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+}
+
+.brand-caffe span {
+    width: 55px;
+    height: 1px;
+    background: rgba(117, 81, 60, .36);
+}
+
+.brand-caffe h2 {
+    font-size: clamp(38px, 11vw, 58px);
+    font-weight: normal;
+    font-style: italic;
+    line-height: 1;
+}
+
+.brand-ornament {
+    height: clamp(48px, 8svh, 82px);
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+}
+
+.brand-ornament i {
+    position: relative;
+    width: 1px;
+    height: 100%;
+    background: #a9765e;
+}
+
+.brand-ornament i::before,
+.brand-ornament i::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border: 1px solid #a9765e;
+}
+
+.brand-ornament i::before {
+    top: -4px;
+    width: 7px;
+    height: 7px;
+    background: var(--cream);
+}
+
+.brand-ornament i::after {
+    bottom: -2px;
+    width: 3px;
+    height: 3px;
+    background: #a9765e;
+}
+
+/* SCHERMATE INTERMEDIE */
+
+.section-screen {
+    position: relative;
+    z-index: 1;
+    min-height: 100svh;
+    padding: clamp(22px, 4svh, 42px) clamp(20px, 6vw, 38px) 24px;
+}
+
+.brand-small h1 {
+    font-size: clamp(33px, 9.5vw, 50px);
+}
+
+.brand-small .brand-caffe {
+    gap: 8px;
+}
+
+.brand-small .brand-caffe span {
+    width: 30px;
+}
+
+.brand-small .brand-caffe h2 {
+    font-size: clamp(25px, 7vw, 36px);
+}
+
+.brand-small .brand-ornament {
+    height: clamp(34px, 5svh, 50px);
+    padding-top: 13px;
+}
+
+.section-heading {
+    margin: clamp(16px, 3svh, 30px) 0 clamp(18px, 3svh, 28px);
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(38px, 11vw, 58px);
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: .04em;
+}
+
+.section-heading p {
+    margin-top: 9px;
+    color: #956d59;
+    font-size: clamp(15px, 4.2vw, 21px);
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.heading-rule {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.heading-rule span {
+    position: relative;
+    width: 110px;
+    height: 1px;
+    background: rgba(127, 133, 108, .5);
+}
+
+.heading-rule span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    background: var(--sage);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.section-links {
+    display: grid;
+    gap: clamp(10px, 1.8svh, 17px);
+}
+
+.section-link {
+    width: 100%;
+    min-height: clamp(67px, 9svh, 94px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1.4px solid var(--brown);
+    border-radius: 22px;
+    padding: 10px 14px 10px 22px;
+    background: rgba(255, 250, 244, .56);
+    color: var(--espresso);
+    text-align: left;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.section-link:active {
+    transform: scale(.985);
+    background: rgba(255, 250, 244, .74);
+}
+
+.section-link span {
+    font-size: clamp(21px, 6vw, 31px);
+    line-height: 1;
+    letter-spacing: .025em;
+}
+
+.section-link i {
+    width: clamp(38px, 11vw, 48px);
+    height: clamp(38px, 11vw, 48px);
+    font-size: clamp(22px, 6vw, 28px);
+}
+
+.home-link {
+    width: 100%;
+    margin-top: clamp(20px, 3svh, 30px);
+    border: 0;
+    padding: 9px;
+    background: transparent;
+    color: var(--sage-dark);
+    font-family: Arial, sans-serif;
+    font-size: clamp(11px, 3vw, 14px);
+    letter-spacing: .15em;
+}
+
+/* PAGINE PRODOTTI ESISTENTI */
+
+body.products-page {
+    background: #f3eadf;
+}
+
+body.products-page .app {
+    max-width: 430px;
 }
 
 .category-title {
-    text-align: center;
     margin-bottom: 25px;
+    text-align: center;
+}
+
+.music {
+    color: #d5bfa6;
+    font-size: 55px;
 }
 
 .category-title h2 {
@@ -127,82 +404,69 @@ footer {
     text-transform: uppercase;
 }
 
-
-/* SCHEDA PRODOTTO */
-
 .product-card {
-    background: #fffaf4;
-    border-radius: 22px;
     overflow: hidden;
     margin-bottom: 22px;
+    border-radius: 22px;
+    background: #fffaf4;
     box-shadow: 0 8px 20px rgba(80, 50, 30, 0.12);
 }
-
-
-/* =========================================
- /* FOTO PRODOTTO */
 
 .product-image {
     width: 100%;
     height: 320px;
-    background: #efe1d0;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #efe1d0;
     color: #b08b65;
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center center;
     display: block;
+    object-fit: cover;
+    object-position: center;
 }
-
-/* TESTO PRODOTTO */
 
 .product-content {
     padding: 18px;
 }
 
 .product-content h3 {
-    color: #6b4630;
     margin-bottom: 8px;
+    color: #6b4630;
     font-size: 20px;
 }
 
 .product-content p {
+    margin-bottom: 12px;
     color: #80614a;
     font-size: 15px;
     line-height: 1.45;
-    margin-bottom: 12px;
 }
 
 .price {
-    text-align: right;
+    margin-top: 10px;
+    color: #a67c52;
     font-size: 21px;
     font-weight: bold;
-    color: #a67c52;
-    margin-top: 10px;
+    text-align: right;
 }
 
-
-/* CAFFETTERIA SENZA FOTO */
-
 .coffee-card {
-    padding: 0;
     margin-bottom: 10px;
     border-radius: 14px;
 }
 
 .coffee-content {
-    padding: 14px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
+    padding: 14px 16px;
 }
 
 .coffee-content h3 {
@@ -217,14 +481,94 @@ footer {
     font-size: 18px;
 }
 
-
-/* PULSANTE INDIETRO */
-
-.back-button {
-    background: #6b4630;
-    margin-top: 15px;
+.empty-category {
+    margin: 30px 0;
+    border-radius: 18px;
+    padding: 28px 18px;
+    background: #fffaf4;
+    color: #80614a;
+    text-align: center;
 }
 
+.back-button {
+    width: 100%;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 30px;
+    padding: 16px;
+    background: #6b4630;
+    color: white;
+    font-size: 17px;
+}
+
+@media (max-width: 600px) {
+    body.products-page {
+        padding: 6px;
+    }
+
+    body.products-page .app {
+        width: 100%;
+        max-width: none;
+        border-radius: 24px;
+        padding: 24px 10px;
+    }
+}
+
+@media (max-height: 720px) and (max-width: 600px) {
+    .home-screen {
+        gap: 10px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .gateway-button {
+        min-height: 145px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+
+    .gateway-copy em {
+        margin-top: 9px;
+    }
+
+    .gateway-copy small {
+        margin-top: 14px;
+    }
+
+    .brand h1 {
+        font-size: 48px;
+    }
+
+    .brand-caffe h2 {
+        font-size: 35px;
+    }
+
+    .brand-ornament {
+        height: 40px;
+        padding-top: 12px;
+    }
+
+    .section-screen {
+        padding-top: 15px;
+    }
+
+    .section-heading {
+        margin-top: 10px;
+        margin-bottom: 12px;
+    }
+
+    .section-links {
+        gap: 8px;
+    }
+
+    .section-link {
+        min-height: 58px;
+    }
+
+    .home-link {
+        margin-top: 12px;
+    }
+}
 
 /* PANINI — LAYOUT DEFINITIVO */
 
