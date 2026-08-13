@@ -353,90 +353,125 @@ body.panini-page .app {
     body.panini-page .app {
         width: 100%;
         max-width: none;
-        margin: 0;
+        margin: 0 auto;
         padding: 24px 10px;
         border-radius: 24px;
         transform: none;
     }
 
+    /* Larghezza reale dello smartphone: niente zoom e niente elementi fuori schermo */
     body.panini-page #products {
-        width: 138%;
-        zoom: 0.724637;
+        width: 100%;
+        max-width: 100%;
+        zoom: 1;
     }
 
     body.panini-page .category-title {
-        margin-bottom: 18px;
+        margin-bottom: 13px;
     }
 
     body.panini-page .category-title .music {
-        font-size: 50px;
+        font-size: 36px;
     }
 
     body.panini-page .category-title h2 {
-        font-size: 34px;
+        font-size: 25px;
     }
 
     body.panini-page .panino-card {
-        min-height: 390px;
-        margin-bottom: 20px;
-        border-radius: 28px;
+        width: 100%;
+        min-height: 300px;
+        margin-bottom: 15px;
+        border-radius: 22px;
     }
 
     body.panini-page .panino-content {
-        width: 44%;
-        min-height: 390px;
-        padding: 30px 8px 26px 25px;
+        width: 42%;
+        min-height: 300px;
+        padding: 22px 6px 19px 18px;
     }
 
     body.panini-page .panino-image {
-        left: 48%;
-        bottom: -10px;
+        left: 44%;
+        right: auto;
+        bottom: -7px;
         width: 56%;
         height: 106%;
     }
 
+    body.panini-page .panino-year {
+        font-size: 9px;
+    }
+
     body.panini-page .panino-content h3 {
-        font-size: 40px;
+        margin: 6px 0 8px;
+        font-size: 29px;
     }
 
     body.panini-page .panino-content h3.panino-name-long {
-        font-size: 33px;
+        font-size: 24px;
     }
 
     body.panini-page .panino-content h3.panino-name-compact {
-        font-size: 27px;
-        letter-spacing: -0.07em;
+        font-size: clamp(17px, 5vw, 22px);
+        letter-spacing: -0.08em;
+        white-space: nowrap;
     }
 
     body.panini-page .panino-reference {
-        font-size: 15px;
+        margin-bottom: 14px;
+        font-size: 11px;
     }
 
     body.panini-page .panino-ingredients {
-        font-size: 16px;
+        font-size: 13px;
+        line-height: 1.35;
+        overflow-wrap: break-word;
     }
 
     body.panini-page .panino-price {
-        font-size: 20px;
+        margin-top: 9px;
+        font-size: 16px;
     }
 
     body.panini-page .back-button {
-        font-size: 18px;
+        font-size: 13px;
     }
 }
 
 @media (max-width: 350px) {
-    body.panini-page #products {
-        width: 142%;
-        zoom: 0.704225;
+    body.panini-page .panino-card,
+    body.panini-page .panino-content {
+        min-height: 305px;
     }
 
     body.panini-page .panino-content {
-        width: 45%;
+        width: 43%;
+        padding-left: 16px;
     }
 
     body.panini-page .panino-image {
-        left: 49%;
+        left: 45%;
         width: 55%;
+    }
+
+    body.panini-page .panino-content h3 {
+        font-size: 27px;
+    }
+
+    body.panini-page .panino-content h3.panino-name-long {
+        font-size: 22px;
+    }
+
+    body.panini-page .panino-content h3.panino-name-compact {
+        font-size: clamp(15px, 4.8vw, 17px);
+    }
+
+    body.panini-page .panino-reference {
+        font-size: 10.5px;
+    }
+
+    body.panini-page .panino-ingredients {
+        font-size: 12.5px;
     }
 }
