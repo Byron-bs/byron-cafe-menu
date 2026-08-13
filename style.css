@@ -252,10 +252,10 @@ body.panini-page .app {
 .panino-image {
     position: absolute;
     z-index: 2;
-    left: 50%;
+    left: 48%;
     right: auto;
     bottom: -8px;
-    width: 54%;
+    width: 56%;
     height: 106%;
     object-fit: contain;
     object-position: right center;
@@ -267,19 +267,27 @@ body.panini-page .app {
     z-index: 1;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(
-        90deg,
-        #dfe8d8 0%,
-        #dfe8d8 43%,
-        rgba(223, 232, 216, 0.68) 50%,
-        rgba(223, 232, 216, 0) 61%
-    );
+    background:
+        radial-gradient(
+            ellipse at 76% 50%,
+            rgba(255, 250, 244, 0.48) 0%,
+            rgba(238, 243, 234, 0.30) 42%,
+            rgba(223, 232, 216, 0) 72%
+        ),
+        linear-gradient(
+            90deg,
+            #dfe8d8 0%,
+            #dfe8d8 42%,
+            rgba(231, 238, 226, 0.72) 53%,
+            rgba(247, 248, 243, 0.34) 66%,
+            rgba(247, 248, 243, 0) 82%
+        );
 }
 
 .panino-content {
     position: relative;
     z-index: 3;
-    width: 45%;
+    width: 44%;
     min-height: 330px;
     padding: 28px 8px 24px 22px;
 }
@@ -300,6 +308,11 @@ body.panini-page .app {
     line-height: 0.96;
     font-weight: normal;
     letter-spacing: -0.04em;
+}
+
+.panino-content h3.panino-name-long {
+    font-size: 31px;
+    letter-spacing: -0.05em;
 }
 
 .panino-reference {
@@ -365,20 +378,24 @@ body.panini-page .app {
     }
 
     body.panini-page .panino-content {
-        width: 45%;
+        width: 44%;
         min-height: 390px;
         padding: 30px 8px 26px 25px;
     }
 
     body.panini-page .panino-image {
-        left: 50%;
+        left: 48%;
         bottom: -10px;
-        width: 54%;
+        width: 56%;
         height: 106%;
     }
 
     body.panini-page .panino-content h3 {
         font-size: 40px;
+    }
+
+    body.panini-page .panino-content h3.panino-name-long {
+        font-size: 33px;
     }
 
     body.panini-page .panino-reference {
@@ -405,11 +422,11 @@ body.panini-page .app {
     }
 
     body.panini-page .panino-content {
-        width: 46%;
+        width: 45%;
     }
 
     body.panini-page .panino-image {
-        left: 51%;
-        width: 53%;
+        left: 49%;
+        width: 55%;
     }
 }
