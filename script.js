@@ -4,7 +4,7 @@ const products = document.getElementById("products");
 
 let menuData = null;
 
-fetch("menu.json")
+fetch("menu.json?v=20260813-definitivo")
 .then(response => response.json())
 .then(menu => {
 
