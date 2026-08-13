@@ -78,7 +78,7 @@ function showCategory(category, menu) {
                             Opera · ${product.anno || ""}
                         </div>
 
-                        <h3>${product.nome}</h3>
+                        <h3 class="${product.nome.length >= 11 ? "panino-name-long" : ""}">${product.nome}</h3>
 
                         ${product.riferimento ? `<p class="panino-reference">${product.riferimento}</p>` : ""}
 
