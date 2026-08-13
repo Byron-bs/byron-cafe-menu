@@ -269,18 +269,17 @@ body.panini-page .app {
     pointer-events: none;
     background:
         radial-gradient(
-            ellipse at 76% 50%,
-            rgba(255, 250, 244, 0.48) 0%,
-            rgba(238, 243, 234, 0.30) 42%,
-            rgba(223, 232, 216, 0) 72%
+            ellipse at 82% 48%,
+            rgba(255, 252, 247, 0.38) 0%,
+            rgba(255, 252, 247, 0.16) 46%,
+            rgba(255, 252, 247, 0) 74%
         ),
         linear-gradient(
             90deg,
-            #dfe8d8 0%,
-            #dfe8d8 42%,
-            rgba(231, 238, 226, 0.72) 53%,
-            rgba(247, 248, 243, 0.34) 66%,
-            rgba(247, 248, 243, 0) 82%
+            #c7d6be 0%,
+            #d7e2d0 44%,
+            #e7ede1 70%,
+            #f3f5ef 100%
         );
 }
 
