@@ -81,6 +81,11 @@ body.menu-index-page .app {
     box-shadow: none;
 }
 
+body.landing-page footer,
+body.menu-index-page footer {
+    display: none;
+}
+
 body.landing-page .app::before,
 body.menu-index-page .app::before {
     content: "♪   ♫";
