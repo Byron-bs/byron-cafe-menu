@@ -4,7 +4,7 @@ const products = document.getElementById("products");
 
 let menuData = null;
 
-fetch("menu.json?v=20260813-definitivo")
+fetch("menu.json?v=20260813-definitivo2")
 .then(response => response.json())
 .then(menu => {
 
@@ -78,7 +78,7 @@ function showCategory(category, menu) {
                             Opera · ${product.anno || ""}
                         </div>
 
-                        <h3 class="${product.nome.length >= 11 ? "panino-name-long" : ""}">${product.nome}</h3>
+                        <h3 class="${product.nome.length >= 11 ? "panino-name-long" : ""}${product.nome.split(" ").some(parola => parola.length >= 10) ? " panino-name-compact" : ""}">${product.nome}</h3>
 
                         ${product.riferimento ? `<p class="panino-reference">${product.riferimento}</p>` : ""}
 
