@@ -33,6 +33,8 @@ fetch("menu.json")
 
 function showCategory(category, menu) {
 
+    document.body.classList.toggle("panini-page", category === "panini");
+
     home.style.display = "none";
     products.classList.remove("hidden");
 
@@ -170,6 +172,8 @@ function showCategory(category, menu) {
 /* TORNA ALLA HOME */
 
 function showHome() {
+
+    document.body.classList.remove("panini-page");
 
     products.classList.add("hidden");
     home.style.display = "block";
