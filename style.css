@@ -452,3 +452,102 @@ body.panini-page .app {
         font-size: 13px;
     }
 }
+
+
+/* LAYOUT VIRTUALE LARGO: 130% RIDOTTO NELLO SCHERMO */
+@media (max-width: 600px) {
+    body.panini-page {
+        padding: 6px 0;
+        overflow-x: hidden;
+    }
+
+    body.panini-page .app {
+        width: 130%;
+        max-width: none;
+        margin-left: -15%;
+        padding: 30px 18px;
+        border-radius: 30px;
+        transform: scale(0.76923);
+        transform-origin: top center;
+    }
+
+    body.panini-page .panino-card {
+        width: 100%;
+        min-height: 350px;
+        margin: 0 0 20px;
+    }
+
+    body.panini-page .panino-content {
+        position: relative;
+        z-index: 4;
+        width: 54%;
+        min-height: 350px;
+        padding: 32px 12px 28px 28px;
+        background: #dfe8d8;
+        box-shadow: 22px 0 24px 10px #dfe8d8;
+    }
+
+    body.panini-page .panino-image {
+        z-index: 2;
+        left: 58%;
+        right: auto;
+        bottom: -8px;
+        width: 42%;
+        height: 108%;
+        object-fit: contain;
+        object-position: right center;
+        transform: translateX(5%);
+        filter: drop-shadow(0 14px 14px rgba(60, 45, 30, 0.16));
+    }
+
+    body.panini-page .panino-transition {
+        z-index: 3;
+        left: 52%;
+        right: 37%;
+        width: auto;
+        background: linear-gradient(
+            90deg,
+            #dfe8d8 0%,
+            rgba(223, 232, 216, 0.78) 45%,
+            rgba(223, 232, 216, 0) 100%
+        );
+    }
+
+    body.panini-page .panino-content h3 {
+        font-size: 38px;
+    }
+
+    body.panini-page .panino-reference,
+    body.panini-page .panino-ingredients {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 370px) {
+    body.panini-page .app {
+        width: 134%;
+        margin-left: -17%;
+        transform: scale(0.74627);
+    }
+
+    body.panini-page .panino-content {
+        width: 55%;
+        min-height: 350px;
+        padding-left: 26px;
+    }
+
+    body.panini-page .panino-image {
+        left: 59%;
+        width: 41%;
+        transform: translateX(5%);
+    }
+
+    body.panini-page .panino-content h3 {
+        font-size: 36px;
+    }
+
+    body.panini-page .panino-reference,
+    body.panini-page .panino-ingredients {
+        font-size: 14px;
+    }
+}
