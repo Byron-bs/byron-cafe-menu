@@ -386,3 +386,69 @@ body.panini-page .app {
         font-size: 34px;
     }
 }
+
+
+/* SEPARAZIONE RIGIDA TESTO / FOTO SU SMARTPHONE */
+@media (max-width: 600px) {
+    body.panini-page .panino-card {
+        min-height: 286px;
+    }
+
+    body.panini-page .panino-content {
+        position: relative;
+        z-index: 4;
+        width: 61%;
+        min-height: 286px;
+        padding: 24px 6px 22px 20px;
+        background: #dfe8d8;
+        box-shadow: 16px 0 24px 12px #dfe8d8;
+    }
+
+    body.panini-page .panino-image {
+        z-index: 2;
+        left: 61%;
+        right: auto;
+        bottom: 0;
+        width: 39%;
+        height: 100%;
+        object-fit: contain;
+        object-position: right center;
+        transform: translateX(8%);
+        filter: drop-shadow(0 10px 10px rgba(60, 45, 30, 0.14));
+    }
+
+    body.panini-page .panino-transition {
+        z-index: 3;
+        left: 55%;
+        right: 30%;
+        width: auto;
+        background: linear-gradient(
+            90deg,
+            #dfe8d8 0%,
+            rgba(223, 232, 216, 0.82) 45%,
+            rgba(223, 232, 216, 0) 100%
+        );
+    }
+}
+
+@media (max-width: 370px) {
+    body.panini-page .panino-content {
+        width: 63%;
+        padding-left: 17px;
+    }
+
+    body.panini-page .panino-image {
+        left: 63%;
+        width: 37%;
+        transform: translateX(10%);
+    }
+
+    body.panini-page .panino-content h3 {
+        font-size: 32px;
+    }
+
+    body.panini-page .panino-reference,
+    body.panini-page .panino-ingredients {
+        font-size: 13px;
+    }
+}
