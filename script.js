@@ -1,222 +1,206 @@
-const buttons = document.querySelectorAll("button[data-category]");
 const home = document.getElementById("home");
+const sectionMenu = document.getElementById("section-menu");
 const products = document.getElementById("products");
+
+const sectionConfig = {
+    bar: {
+        title: "IL BAR",
+        subtitle: "Caffetteria, vini e bevande",
+        items: [
+            { label: "CAFFETTERIA", category: "caffetteria" },
+            { label: "BEVANDE", category: "bevande" },
+            { label: "VINI / APERITIVI", category: "aperitivi" },
+            { label: "BIRRE", category: "birre" },
+            { label: "LIQUORI", category: "liquori" }
+        ]
+    },
+    cucina: {
+        title: "LA CUCINA",
+        subtitle: "Primi, secondi e proposte veloci",
+        items: [
+            { label: "PRIMI PIATTI", category: "primi" },
+            { label: "SECONDI PIATTI", category: "secondi" },
+            { label: "INSALATONE", category: "insalatone" },
+            { label: "PANINI", category: "panini" },
+            { label: "DESSERT", category: "dessert" }
+        ]
+    }
+};
+
+const categoryLabels = {
+    caffetteria: "CAFFETTERIA",
+    bevande: "BEVANDE",
+    aperitivi: "VINI / APERITIVI",
+    birre: "BIRRE",
+    liquori: "LIQUORI",
+    primi: "PRIMI PIATTI",
+    secondi: "SECONDI PIATTI",
+    insalatone: "INSALATONE",
+    panini: "PANINI",
+    dessert: "DESSERT"
+};
 
 let menuData = null;
 
 fetch("menu.json?v=20260813-definitivo2")
 .then(response => response.json())
 .then(menu => {
-
     menuData = menu;
+    renderFromHash();
 
-    const initialCategory = window.location.hash.replace("#", "");
-
-    if(initialCategory && menu.categorie[initialCategory]) {
-        showCategory(initialCategory, menu);
-    }
-
-    buttons.forEach(button => {
-
-        button.addEventListener("click", () => {
-
-            const category = button.dataset.category;
-
-            // Aggiunge la categoria alla cronologia del browser
-            history.pushState(
-                { category: category },
-                "",
-                `#${category}`
-            );
-
-            showCategory(category, menu);
-
-        });
-
+    document.querySelectorAll("[data-section]").forEach(button => {
+        button.addEventListener("click", () => navigateTo(button.dataset.section));
     });
-
 });
 
-function showCategory(category, menu) {
+function navigateTo(destination) {
+    history.pushState({}, "", `#${destination}`);
+    renderFromHash();
+}
 
-    document.body.classList.toggle("panini-page", category === "panini");
+function renderFromHash() {
+    if(!menuData) return;
 
-    home.style.display = "none";
-    products.classList.remove("hidden");
+    const destination = window.location.hash.replace("#", "");
 
-    let html = `
+    if(sectionConfig[destination]) {
+        showSection(destination);
+    } else if(destination && menuData.categorie[destination]) {
+        showCategory(destination, menuData);
+    } else if(destination) {
+        showSection(destination === "bar" ? "bar" : "cucina");
+    } else {
+        showHome();
+    }
+}
 
-    <div class="category-title">
+function setPage(pageClass = "") {
+    document.body.className = pageClass;
+    home.classList.add("hidden");
+    sectionMenu.classList.add("hidden");
+    products.classList.add("hidden");
+}
 
-        <div class="music">
-            ♪
+function showHome() {
+    setPage("landing-page");
+    home.classList.remove("hidden");
+    window.scrollTo(0, 0);
+}
+
+function showSection(sectionKey) {
+    const section = sectionConfig[sectionKey];
+    setPage("menu-index-page");
+
+    sectionMenu.innerHTML = `
+        <header class="brand brand-small" aria-label="BYRON Caffè">
+            <h1>BYRON</h1>
+            <div class="brand-caffe"><span></span><h2>Caffè</h2><span></span></div>
+            <div class="brand-ornament" aria-hidden="true"><i></i></div>
+        </header>
+
+        <div class="section-heading">
+            <h2>${section.title}</h2>
+            <p>${section.subtitle}</p>
+            <div class="heading-rule" aria-hidden="true"><span></span></div>
         </div>
 
-        <h2>${category}</h2>
+        <nav class="section-links" aria-label="${section.title}">
+            ${section.items.map(item => `
+                <button class="section-link" data-category="${item.category}" type="button">
+                    <span>${item.label}</span>
+                    <i aria-hidden="true">→</i>
+                </button>
+            `).join("")}
+        </nav>
 
-    </div>
-
+        <button class="home-link" type="button">← TORNA ALLA HOME</button>
     `;
 
-    if(menu.categorie[category]) {
+    sectionMenu.classList.remove("hidden");
 
-        menu.categorie[category].forEach(product => {
+    sectionMenu.querySelectorAll("[data-category]").forEach(button => {
+        button.addEventListener("click", () => navigateTo(button.dataset.category));
+    });
 
+    sectionMenu.querySelector(".home-link").addEventListener("click", () => navigateHome());
+    window.scrollTo(0, 0);
+}
+
+function showCategory(category, menu) {
+    setPage(category === "panini" ? "panini-page" : "products-page");
+
+    let html = `
+        <div class="category-title">
+            <div class="music">♪</div>
+            <h2>${categoryLabels[category] || category}</h2>
+        </div>
+    `;
+
+    const items = menu.categorie[category] || [];
+
+    if(items.length) {
+        items.forEach(product => {
             if(category === "panini") {
-
                 html += `
-
-                <article class="panino-card">
-
-                    <img class="panino-image" src="${product.immagine}" alt="${product.nome}">
-
-                    <div class="panino-transition"></div>
-
-                    <div class="panino-content">
-
-                        <div class="panino-year">
-                            Opera · ${product.anno || ""}
+                    <article class="panino-card">
+                        <img class="panino-image" src="${product.immagine}" alt="${product.nome}">
+                        <div class="panino-transition"></div>
+                        <div class="panino-content">
+                            <div class="panino-year">Opera · ${product.anno || ""}</div>
+                            <h3 class="${product.nome.length >= 11 ? "panino-name-long" : ""}${product.nome.split(" ").some(parola => parola.length >= 10) ? " panino-name-compact" : ""}">${product.nome}</h3>
+                            ${product.riferimento ? `<p class="panino-reference">${product.riferimento}</p>` : ""}
+                            <p class="panino-ingredients">${product.descrizione}</p>
+                            <div class="panino-price">${product.prezzo}</div>
                         </div>
-
-                        <h3 class="${product.nome.length >= 11 ? "panino-name-long" : ""}${product.nome.split(" ").some(parola => parola.length >= 10) ? " panino-name-compact" : ""}">${product.nome}</h3>
-
-                        ${product.riferimento ? `<p class="panino-reference">${product.riferimento}</p>` : ""}
-
-                        <p class="panino-ingredients">${product.descrizione}</p>
-
-                        <div class="panino-price">
-                            ${product.prezzo}
-                        </div>
-
-                    </div>
-
-                </article>
-
+                    </article>
                 `;
-
             } else if(category === "caffetteria") {
-
                 html += `
-
-                <div class="product-card coffee-card">
-
-                    <div class="product-content coffee-content">
-
-                        <h3>${product.nome}</h3>
-
-                        <div class="price">
-                            ${product.prezzo}
+                    <div class="product-card coffee-card">
+                        <div class="product-content coffee-content">
+                            <h3>${product.nome}</h3>
+                            <div class="price">${product.prezzo}</div>
                         </div>
-
                     </div>
-
-                </div>
-
                 `;
-
             } else {
-
                 html += `
-
-                <div class="product-card">
-
-                    <div class="product-image">
-
-                        ${
-                            product.immagine
-                            ? `<img src="${product.immagine}" alt="${product.nome}">`
-                            : `Foto prodotto`
-                        }
-
-                    </div>
-
-                    <div class="product-content">
-
-                        <h3>${product.nome}</h3>
-
-                        ${product.descrizione ? `<p>${product.descrizione}</p>` : ""}
-
-                        <div class="price">
-                            ${product.prezzo}
+                    <div class="product-card">
+                        <div class="product-image">
+                            ${product.immagine ? `<img src="${product.immagine}" alt="${product.nome}">` : "Foto prodotto"}
                         </div>
-
+                        <div class="product-content">
+                            <h3>${product.nome}</h3>
+                            ${product.descrizione ? `<p>${product.descrizione}</p>` : ""}
+                            <div class="price">${product.prezzo}</div>
+                        </div>
                     </div>
-
-                </div>
-
                 `;
-
             }
-
         });
-
+    } else {
+        html += `
+            <div class="empty-category">
+                <p>La selezione sarà disponibile a breve.</p>
+            </div>
+        `;
     }
 
     html += `
-
-    <button class="back-button" id="back">
-        ← Torna al menù
-    </button>
-
+        <button class="back-button" id="back" type="button">← Torna al menù</button>
     `;
 
     products.innerHTML = html;
-
-    document
-    .getElementById("back")
-    .addEventListener("click", () => {
-
-        // Usa la cronologia invece di mostrare
-        // direttamente la home
-        history.back();
-
-    });
-
-}
-
-
-/* TORNA ALLA HOME */
-
-function showHome() {
-
-    document.body.classList.remove("panini-page");
-
-    products.classList.add("hidden");
-    home.style.display = "block";
-
-    // Torna in cima alla pagina
+    products.classList.remove("hidden");
+    document.getElementById("back").addEventListener("click", () => history.back());
     window.scrollTo(0, 0);
-
 }
 
-
-/* GESTIONE TASTO INDIETRO DEL BROWSER / TELEFONO */
-
-window.addEventListener("popstate", event => {
-
-    if(event.state && event.state.category && menuData) {
-
-        showCategory(event.state.category, menuData);
-
-    } else {
-
-        showHome();
-
+function navigateHome() {
+    if(window.location.hash) {
+        history.pushState({}, "", window.location.pathname + window.location.search);
     }
+    showHome();
+}
 
-});
-
-
-/* SE LA PAGINA VIENE APERTA CON UNA CATEGORIA NELL'URL */
-
-window.addEventListener("load", () => {
-
-    const category = window.location.hash.replace("#", "");
-
-    if(category && menuData && menuData.categorie[category]) {
-
-        showCategory(category, menuData);
-
-    }
-
-});
+window.addEventListener("popstate", renderFromHash);
