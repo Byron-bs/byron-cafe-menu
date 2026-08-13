@@ -404,8 +404,9 @@ body.panini-page .app {
     }
 
     body.panini-page .panino-content h3 {
+        max-width: 100%;
         margin: 6px 0 8px;
-        font-size: 29px;
+        font-size: clamp(20px, 6.55vw, 27px);
     }
 
     body.panini-page .panino-content h3.panino-name-long {
@@ -413,7 +414,7 @@ body.panini-page .app {
     }
 
     body.panini-page .panino-content h3.panino-name-compact {
-        font-size: clamp(17px, 5vw, 22px);
+        font-size: clamp(14px, 4.55vw, 20px);
         letter-spacing: -0.08em;
         white-space: nowrap;
     }
@@ -456,7 +457,7 @@ body.panini-page .app {
     }
 
     body.panini-page .panino-content h3 {
-        font-size: 27px;
+        font-size: clamp(20px, 6.55vw, 23px);
     }
 
     body.panini-page .panino-content h3.panino-name-long {
@@ -464,7 +465,7 @@ body.panini-page .app {
     }
 
     body.panini-page .panino-content h3.panino-name-compact {
-        font-size: clamp(15px, 4.8vw, 17px);
+        font-size: clamp(14px, 4.55vw, 16px);
     }
 
     body.panini-page .panino-reference {
