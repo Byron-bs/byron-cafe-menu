@@ -230,12 +230,14 @@ footer {
 
 .panino-card {
     position: relative;
-    width: calc(100% + 24px);
+    width: 120%;
     min-height: 272px;
-    margin-left: -12px;
+    margin-left: -10%;
     margin-bottom: 16px;
     border-radius: 24px;
     overflow: hidden;
+    clip-path: inset(0 round 24px);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
     background: #dfe8d8;
     color: #4b3425;
     isolation: isolate;
