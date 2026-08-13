@@ -65,7 +65,7 @@ function renderFromHash() {
 
     if(sectionConfig[destination]) {
         showSection(destination);
-    } else if(destination && menuData.categorie[destination]) {
+    } else if(destination && (menuData.categorie[destination] || categoryLabels[destination])) {
         showCategory(destination, menuData);
     } else if(destination) {
         showSection(destination === "bar" ? "bar" : "cucina");
