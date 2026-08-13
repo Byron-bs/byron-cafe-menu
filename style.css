@@ -406,7 +406,7 @@ body.panini-page .app {
     body.panini-page .panino-content h3 {
         max-width: 100%;
         margin: 6px 0 8px;
-        font-size: clamp(20px, 6.55vw, 27px);
+        font-size: clamp(20px, 6.4vw, 27px);
     }
 
     body.panini-page .panino-content h3.panino-name-long {
@@ -457,7 +457,7 @@ body.panini-page .app {
     }
 
     body.panini-page .panino-content h3 {
-        font-size: clamp(20px, 6.55vw, 23px);
+        font-size: clamp(20px, 6.4vw, 23px);
     }
 
     body.panini-page .panino-content h3.panino-name-long {
