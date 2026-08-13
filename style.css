@@ -315,6 +315,11 @@ body.panini-page .app {
     letter-spacing: -0.05em;
 }
 
+.panino-content h3.panino-name-compact {
+    font-size: 27px;
+    letter-spacing: -0.07em;
+}
+
 .panino-reference {
     margin: 0 0 18px;
     color: rgba(101, 83, 70, 0.58);
@@ -396,6 +401,11 @@ body.panini-page .app {
 
     body.panini-page .panino-content h3.panino-name-long {
         font-size: 33px;
+    }
+
+    body.panini-page .panino-content h3.panino-name-compact {
+        font-size: 27px;
+        letter-spacing: -0.07em;
     }
 
     body.panini-page .panino-reference {
