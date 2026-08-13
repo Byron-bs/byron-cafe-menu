@@ -226,7 +226,11 @@ footer {
 }
 
 
-/* PANINI — LISTA MOBILE ISPIRATA ALLE OPERE DI BYRON */
+/* PANINI — LAYOUT DEFINITIVO */
+
+body.panini-page {
+    overflow-x: hidden;
+}
 
 body.panini-page .app {
     width: 100%;
@@ -235,14 +239,10 @@ body.panini-page .app {
 
 .panino-card {
     position: relative;
-    width: 100%;
-    min-height: 272px;
-    margin-left: 0;
+    min-height: 330px;
     margin-bottom: 16px;
-    border-radius: 24px;
     overflow: hidden;
-    clip-path: inset(0 round 24px);
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    border-radius: 26px;
     background: #dfe8d8;
     color: #4b3425;
     isolation: isolate;
@@ -252,13 +252,14 @@ body.panini-page .app {
 .panino-image {
     position: absolute;
     z-index: 2;
-    right: -52px;
-    bottom: -20px;
-    width: 292px;
-    height: 292px;
+    left: 50%;
+    right: auto;
+    bottom: -8px;
+    width: 54%;
+    height: 106%;
     object-fit: contain;
-    object-position: center;
-    filter: drop-shadow(0 14px 15px rgba(60, 45, 30, 0.18));
+    object-position: right center;
+    filter: drop-shadow(0 14px 14px rgba(60, 45, 30, 0.16));
 }
 
 .panino-transition {
@@ -269,17 +270,18 @@ body.panini-page .app {
     background: linear-gradient(
         90deg,
         #dfe8d8 0%,
-        #dfe8d8 42%,
-        rgba(223, 232, 216, 0.68) 53%,
-        rgba(223, 232, 216, 0) 65%
+        #dfe8d8 43%,
+        rgba(223, 232, 216, 0.68) 50%,
+        rgba(223, 232, 216, 0) 61%
     );
 }
 
 .panino-content {
     position: relative;
-    z-index: 2;
-    width: 61%;
-    padding: 28px 0 26px 24px;
+    z-index: 3;
+    width: 45%;
+    min-height: 330px;
+    padding: 28px 8px 24px 22px;
 }
 
 .panino-year {
@@ -291,18 +293,18 @@ body.panini-page .app {
 }
 
 .panino-content h3 {
-    margin: 6px 0 8px;
+    margin: 7px 0 10px;
     color: #4b3425;
     font-family: Georgia, serif;
-    font-size: 38px;
+    font-size: 36px;
     line-height: 0.96;
     font-weight: normal;
     letter-spacing: -0.04em;
 }
 
 .panino-reference {
-    margin: 0 0 16px;
-    color: rgba(101, 83, 70, 0.66);
+    margin: 0 0 18px;
+    color: rgba(101, 83, 70, 0.58);
     font-family: Georgia, serif;
     font-size: 14px;
     line-height: 1.35;
@@ -313,15 +315,15 @@ body.panini-page .app {
     margin: 0;
     color: #4b3425;
     font-family: Georgia, serif;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.4;
     font-weight: bold;
 }
 
 .panino-price {
-    margin-top: 10px;
+    margin-top: 11px;
     color: #8c633f;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
 }
 
@@ -333,8 +335,15 @@ body.panini-page .app {
     body.panini-page .app {
         width: 100%;
         max-width: none;
+        margin: 0;
         padding: 24px 10px;
         border-radius: 24px;
+        transform: none;
+    }
+
+    body.panini-page #products {
+        width: 138%;
+        zoom: 0.724637;
     }
 
     body.panini-page .category-title {
@@ -342,212 +351,65 @@ body.panini-page .app {
     }
 
     body.panini-page .category-title .music {
-        font-size: 42px;
+        font-size: 50px;
     }
 
-    body.panini-page .panino-card {
-        width: 100%;
-        min-height: 260px;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    body.panini-page .panino-image {
-        right: -52px;
-        bottom: -18px;
-        width: 280px;
-        height: 280px;
-    }
-
-    body.panini-page .panino-content {
-        width: 60%;
-        padding: 25px 0 24px 22px;
-    }
-}
-
-@media (max-width: 370px) {
-    .app {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .panino-content {
-        width: 63%;
-        padding-left: 20px;
-    }
-
-    .panino-image {
-        right: -62px;
-        width: 275px;
-        height: 275px;
-    }
-
-    .panino-content h3 {
+    body.panini-page .category-title h2 {
         font-size: 34px;
     }
-}
 
-
-/* SEPARAZIONE RIGIDA TESTO / FOTO SU SMARTPHONE */
-@media (max-width: 600px) {
     body.panini-page .panino-card {
-        min-height: 286px;
+        min-height: 390px;
+        margin-bottom: 20px;
+        border-radius: 28px;
     }
 
     body.panini-page .panino-content {
-        position: relative;
-        z-index: 4;
-        width: 61%;
-        min-height: 286px;
-        padding: 24px 6px 22px 20px;
-        background: #dfe8d8;
-        box-shadow: 16px 0 24px 12px #dfe8d8;
+        width: 45%;
+        min-height: 390px;
+        padding: 30px 8px 26px 25px;
     }
 
     body.panini-page .panino-image {
-        z-index: 2;
-        left: 61%;
-        right: auto;
-        bottom: 0;
-        width: 39%;
-        height: 100%;
-        object-fit: contain;
-        object-position: right center;
-        transform: translateX(8%);
-        filter: drop-shadow(0 10px 10px rgba(60, 45, 30, 0.14));
-    }
-
-    body.panini-page .panino-transition {
-        z-index: 3;
-        left: 55%;
-        right: 30%;
-        width: auto;
-        background: linear-gradient(
-            90deg,
-            #dfe8d8 0%,
-            rgba(223, 232, 216, 0.82) 45%,
-            rgba(223, 232, 216, 0) 100%
-        );
-    }
-}
-
-@media (max-width: 370px) {
-    body.panini-page .panino-content {
-        width: 63%;
-        padding-left: 17px;
-    }
-
-    body.panini-page .panino-image {
-        left: 63%;
-        width: 37%;
-        transform: translateX(10%);
-    }
-
-    body.panini-page .panino-content h3 {
-        font-size: 32px;
-    }
-
-    body.panini-page .panino-reference,
-    body.panini-page .panino-ingredients {
-        font-size: 13px;
-    }
-}
-
-
-/* LAYOUT VIRTUALE LARGO: 130% RIDOTTO NELLO SCHERMO */
-@media (max-width: 600px) {
-    body.panini-page {
-        padding: 6px 0;
-        overflow-x: hidden;
-    }
-
-    body.panini-page .app {
-        width: 130%;
-        max-width: none;
-        margin-left: -15%;
-        padding: 30px 18px;
-        border-radius: 30px;
-        transform: scale(0.76923);
-        transform-origin: top center;
-    }
-
-    body.panini-page .panino-card {
-        width: 100%;
-        min-height: 350px;
-        margin: 0 0 20px;
-    }
-
-    body.panini-page .panino-content {
-        position: relative;
-        z-index: 4;
+        left: 50%;
+        bottom: -10px;
         width: 54%;
-        min-height: 350px;
-        padding: 32px 12px 28px 28px;
-        background: #dfe8d8;
-        box-shadow: 22px 0 24px 10px #dfe8d8;
-    }
-
-    body.panini-page .panino-image {
-        z-index: 2;
-        left: 58%;
-        right: auto;
-        bottom: -8px;
-        width: 42%;
-        height: 108%;
-        object-fit: contain;
-        object-position: right center;
-        transform: translateX(5%);
-        filter: drop-shadow(0 14px 14px rgba(60, 45, 30, 0.16));
-    }
-
-    body.panini-page .panino-transition {
-        z-index: 3;
-        left: 52%;
-        right: 37%;
-        width: auto;
-        background: linear-gradient(
-            90deg,
-            #dfe8d8 0%,
-            rgba(223, 232, 216, 0.78) 45%,
-            rgba(223, 232, 216, 0) 100%
-        );
+        height: 106%;
     }
 
     body.panini-page .panino-content h3 {
-        font-size: 38px;
+        font-size: 40px;
     }
 
-    body.panini-page .panino-reference,
+    body.panini-page .panino-reference {
+        font-size: 15px;
+    }
+
     body.panini-page .panino-ingredients {
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    body.panini-page .panino-price {
+        font-size: 20px;
+    }
+
+    body.panini-page .back-button {
+        font-size: 18px;
     }
 }
 
-@media (max-width: 370px) {
-    body.panini-page .app {
-        width: 134%;
-        margin-left: -17%;
-        transform: scale(0.74627);
+@media (max-width: 350px) {
+    body.panini-page #products {
+        width: 142%;
+        zoom: 0.704225;
     }
 
     body.panini-page .panino-content {
-        width: 55%;
-        min-height: 350px;
-        padding-left: 26px;
+        width: 46%;
     }
 
     body.panini-page .panino-image {
-        left: 59%;
-        width: 41%;
-        transform: translateX(5%);
-    }
-
-    body.panini-page .panino-content h3 {
-        font-size: 36px;
-    }
-
-    body.panini-page .panino-reference,
-    body.panini-page .panino-ingredients {
-        font-size: 14px;
+        left: 51%;
+        width: 53%;
     }
 }
