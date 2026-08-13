@@ -10,6 +10,12 @@ fetch("menu.json")
 
     menuData = menu;
 
+    const initialCategory = window.location.hash.replace("#", "");
+
+    if(initialCategory && menu.categorie[initialCategory]) {
+        showCategory(initialCategory, menu);
+    }
+
     buttons.forEach(button => {
 
         button.addEventListener("click", () => {
