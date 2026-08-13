@@ -54,7 +54,39 @@ function showCategory(category, menu) {
 
         menu.categorie[category].forEach(product => {
 
-            if(category === "caffetteria") {
+            if(category === "panini") {
+
+                html += `
+
+                <article class="panino-card">
+
+                    <img class="panino-image" src="${product.immagine}" alt="${product.nome}">
+
+                    <div class="panino-fog"></div>
+
+                    <div class="panino-content">
+
+                        <div class="panino-year">
+                            Opera · ${product.anno || ""}
+                        </div>
+
+                        <h3>${product.nome}</h3>
+
+                        ${product.riferimento ? `<p class="panino-reference">${product.riferimento}</p>` : ""}
+
+                        <p class="panino-ingredients">${product.descrizione}</p>
+
+                        <div class="panino-price">
+                            ${product.prezzo}
+                        </div>
+
+                    </div>
+
+                </article>
+
+                `;
+
+            } else if(category === "caffetteria") {
 
                 html += `
 
