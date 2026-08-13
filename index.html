@@ -1,140 +1,49 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>BYRON Caffè</title>
-
-<link rel="stylesheet" href="style.css?v=20260813-sfumatura-finale">
-
+<link rel="stylesheet" href="style.css?v=20260813-nuova-home">
 </head>
-
-
 <body>
-
-
 <div class="app">
 
+<main id="home" class="home-screen">
+    <div class="home-choice home-choice-top">
+        <button class="gateway-button" data-section="bar" type="button">
+            <span class="gateway-copy">
+                <strong>IL BAR</strong>
+                <em>Caffetteria, vini e bevande</em>
+                <small>SCOPRI IL MENU</small>
+            </span>
+            <span class="gateway-arrow" aria-hidden="true">→</span>
+        </button>
+    </div>
 
-<div id="home">
+    <header class="brand brand-home" aria-label="BYRON Caffè">
+        <h1>BYRON</h1>
+        <div class="brand-caffe"><span></span><h2>Caffè</h2><span></span></div>
+        <div class="brand-ornament" aria-hidden="true"><i></i></div>
+    </header>
 
+    <div class="home-choice home-choice-bottom">
+        <button class="gateway-button" data-section="cucina" type="button">
+            <span class="gateway-copy">
+                <strong>LA CUCINA</strong>
+                <em>Primi, secondi e proposte veloci</em>
+                <small>SCOPRI IL MENU</small>
+            </span>
+            <span class="gateway-arrow" aria-hidden="true">→</span>
+        </button>
+    </div>
+</main>
 
-<header class="logo">
+<section id="section-menu" class="section-screen hidden" aria-live="polite"></section>
+<section id="products" class="hidden"></section>
 
-<div class="music">♪</div>
-
-<h1>BYRON</h1>
-
-<h2>Caffè</h2>
-
-<p>Bar • Tavola Calda</p>
-
-</header>
-
-
-
-<div class="cover">
-
-<span>Foto locale</span>
-
+<footer>BYRON Caffè</footer>
 </div>
-
-
-
-<section>
-
-<h3>☕ BAR</h3>
-
-
-<button data-category="colazioni">
-🥐 Colazioni
-</button>
-
-
-<button data-category="caffetteria">
-☕ Caffetteria
-</button>
-
-
-<button data-category="aperitivi">
-🍹 Aperitivi
-</button>
-
-
-<button data-category="bevande">
-🥤 Bevande
-</button>
-
-
-</section>
-
-
-
-
-<section>
-
-<h3>🍽 CUCINA</h3>
-
-
-<button data-category="primi">
-🍝 Primi Piatti
-</button>
-
-
-<button data-category="secondi">
-🥩 Secondi
-</button>
-
-
-<button data-category="insalatone">
-🥗 Insalatone
-</button>
-
-
-<button data-category="panini">
-🥪 Panini
-</button>
-
-
-<button data-category="dessert">
-🍰 Dessert
-</button>
-
-
-</section>
-
-
-</div>
-
-
-
-
-
-<div id="products" class="hidden">
-
-
-</div>
-
-
-
-<footer>
-
-BYRON Caffè
-
-</footer>
-
-
-</div>
-
-
-
-<script src="script.js?v=20260813-sfumatura-finale"></script>
-
-
+<script src="script.js?v=20260813-nuova-home"></script>
 </body>
-
 </html>
