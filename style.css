@@ -224,3 +224,111 @@ footer {
     background: #6b4630;
     margin-top: 15px;
 }
+
+
+/* PANINI — LISTA MOBILE ISPIRATA ALLE OPERE DI BYRON */
+
+.panino-card {
+    position: relative;
+    min-height: 245px;
+    margin-bottom: 14px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #dfe8d8;
+    color: #4b3425;
+    isolation: isolate;
+    box-shadow: 0 8px 20px rgba(80, 50, 30, 0.10);
+}
+
+.panino-image {
+    position: absolute;
+    z-index: 0;
+    right: -42px;
+    bottom: -28px;
+    width: 275px;
+    height: 275px;
+    object-fit: contain;
+    object-position: center;
+    filter: drop-shadow(0 14px 15px rgba(60, 45, 30, 0.18));
+}
+
+.panino-fog {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 62% 52%, rgba(151, 171, 139, 0.22), transparent 45%),
+        linear-gradient(90deg, #dfe8d8 0%, #dfe8d8 43%, rgba(223, 232, 216, 0.88) 56%, rgba(223, 232, 216, 0) 79%);
+}
+
+.panino-content {
+    position: relative;
+    z-index: 2;
+    width: 59%;
+    padding: 24px 0 22px 22px;
+}
+
+.panino-year {
+    color: #6d795f;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.panino-content h3 {
+    margin: 6px 0 8px;
+    color: #4b3425;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 0.96;
+    font-weight: normal;
+    letter-spacing: -0.04em;
+}
+
+.panino-reference {
+    margin: 0 0 16px;
+    color: #655346;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.35;
+    font-style: italic;
+}
+
+.panino-ingredients {
+    margin: 0;
+    color: #5d493b;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.panino-price {
+    margin-top: 10px;
+    color: #8c633f;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 370px) {
+    .app {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .panino-content {
+        width: 62%;
+        padding-left: 18px;
+    }
+
+    .panino-image {
+        right: -58px;
+        width: 255px;
+        height: 255px;
+    }
+
+    .panino-content h3 {
+        font-size: 34px;
+    }
+}
