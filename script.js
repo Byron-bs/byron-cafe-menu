@@ -70,7 +70,7 @@ function showCategory(category, menu) {
 
                     <img class="panino-image" src="${product.immagine}" alt="${product.nome}">
 
-                    <div class="panino-fog"></div>
+                    <div class="panino-transition"></div>
 
                     <div class="panino-content">
 
