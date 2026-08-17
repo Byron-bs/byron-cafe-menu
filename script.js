@@ -57,7 +57,7 @@ const productImages = {
 
 let menuData = null;
 
-fetch("menu.json?v=20260817-secondi1")
+fetch("menu.json?v=20260817-opt1")
 .then(response => response.json())
 .then(menu => {
     menuData = menu;
