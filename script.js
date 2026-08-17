@@ -42,7 +42,7 @@ const categoryLabels = {
 
 let menuData = null;
 
-fetch("menu.json?v=20260813-definitivo2")
+fetch("menu.json?v=20260817-bar-menu1")
 .then(response => response.json())
 .then(menu => {
     menuData = menu;
@@ -154,7 +154,7 @@ function showCategory(category, menu) {
                         </div>
                     </article>
                 `;
-            } else if(category === "caffetteria") {
+            } else if(["caffetteria", "bevande", "aperitivi", "birre", "liquori"].includes(category)) {
                 html += `
                     <div class="product-card coffee-card">
                         <div class="product-content coffee-content">
