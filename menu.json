@@ -136,14 +136,49 @@
     ],
     "bevande": [
       {
-        "nome": "Acqua naturale",
-        "descrizione": "Bottiglia 0,5 L",
-        "prezzo": "1,00 €"
+        "nome": "Acqua minerale al bicchiere",
+        "descrizione": "",
+        "prezzo": "0,60 €"
       },
       {
-        "nome": "Bibita",
-        "descrizione": "Coca Cola, Fanta o Sprite",
+        "nome": "Acqua minerale in bottiglia",
+        "descrizione": "",
+        "prezzo": "1,20 €"
+      },
+      {
+        "nome": "Bibite in lattina",
+        "descrizione": "",
         "prezzo": "3,00 €"
+      },
+      {
+        "nome": "Succhi di frutta",
+        "descrizione": "",
+        "prezzo": "3,00 €"
+      },
+      {
+        "nome": "Succhi di melograno e mirtillo",
+        "descrizione": "",
+        "prezzo": "3,50 €"
+      },
+      {
+        "nome": "Spremute",
+        "descrizione": "",
+        "prezzo": "4,00 €"
+      },
+      {
+        "nome": "Red Bull",
+        "descrizione": "",
+        "prezzo": "3,50 €"
+      },
+      {
+        "nome": "Acqua e sciroppo",
+        "descrizione": "",
+        "prezzo": "2,00 €"
+      },
+      {
+        "nome": "Latte e menta",
+        "descrizione": "",
+        "prezzo": "2,50 €"
       }
     ],
     "primi": [
@@ -440,6 +475,127 @@
       {
         "nome": "Tiramisù della casa",
         "descrizione": "Crema al mascarpone e caffè",
+        "prezzo": "5,00 €"
+      }
+    ],
+    "aperitivi": [
+      {
+        "nome": "Lugana Cà Maiol Prestige",
+        "descrizione": "",
+        "prezzo": "Cal. 4,50 € / Bott. 24,00 €"
+      },
+      {
+        "nome": "Pinot",
+        "descrizione": "",
+        "prezzo": "Cal. 2,00 € / Bott. 9,00 €"
+      },
+      {
+        "nome": "Prosecco Santa Margherita",
+        "descrizione": "",
+        "prezzo": "Cal. 5,00 € / Bott. 25,00 €"
+      },
+      {
+        "nome": "Franciacorta Brut Antica Fratta",
+        "descrizione": "",
+        "prezzo": "Bott. 30,00 €"
+      },
+      {
+        "nome": "Franciacorta Satèn Antica Fratta",
+        "descrizione": "",
+        "prezzo": "Bott. 34,00 €"
+      },
+      {
+        "nome": "Franciacorta Rosé Montina",
+        "descrizione": "",
+        "prezzo": "Bott. 32,00 €"
+      },
+      {
+        "nome": "Barone Pizzini rosso",
+        "descrizione": "",
+        "prezzo": "Cal. 5,00 € / Bott. 22,00 €"
+      },
+      {
+        "nome": "Ferghettina",
+        "descrizione": "",
+        "prezzo": "Cal. 5,00 € / Bott. 22,00 €"
+      },
+      {
+        "nome": "Ronchedone",
+        "descrizione": "",
+        "prezzo": "Cal. 6,00 € / Bott. 30,00 €"
+      },
+      {
+        "nome": "Pirlo",
+        "descrizione": "",
+        "prezzo": "5,00 €"
+      },
+      {
+        "nome": "Crodino",
+        "descrizione": "",
+        "prezzo": "3,50 €"
+      },
+      {
+        "nome": "Sanbittèr",
+        "descrizione": "",
+        "prezzo": "3,50 €"
+      },
+      {
+        "nome": "Sanbittèr fruttati",
+        "descrizione": "Sambuco, fichi d’India, passion fruit, pesca",
+        "prezzo": "4,00 €"
+      }
+    ],
+    "birre": [
+      {
+        "nome": "Corona",
+        "descrizione": "",
+        "prezzo": "4,00 €"
+      },
+      {
+        "nome": "Ichnusa Non Filtrata",
+        "descrizione": "",
+        "prezzo": "4,00 €"
+      },
+      {
+        "nome": "Heineken",
+        "descrizione": "",
+        "prezzo": "3,50 €"
+      },
+      {
+        "nome": "Beck’s",
+        "descrizione": "",
+        "prezzo": "3,50 €"
+      },
+      {
+        "nome": "Menabrea chiara",
+        "descrizione": "",
+        "prezzo": "3,50 €"
+      },
+      {
+        "nome": "Menabrea ambrata",
+        "descrizione": "",
+        "prezzo": "4,00 €"
+      },
+      {
+        "nome": "Ceres",
+        "descrizione": "",
+        "prezzo": "4,00 €"
+      },
+      {
+        "nome": "Bud",
+        "descrizione": "",
+        "prezzo": "3,50 €"
+      }
+    ],
+    "liquori": [
+      {
+        "nome": "Liquori e amari",
+        "descrizione": "",
+        "prezzo": "4,00 €"
+      },
+      {
+        "nome": "Whisky",
+        "descrizione": "",
         "prezzo": "5,00 €"
       }
     ]
