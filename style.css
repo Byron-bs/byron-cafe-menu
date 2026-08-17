@@ -475,15 +475,20 @@ body.products-page .app {
 }
 
 .coffee-content h3 {
+    flex: 1 1 auto;
+    min-width: 0;
     margin: 0;
     font-size: 17px;
     font-weight: normal;
+    overflow-wrap: break-word;
 }
 
 .coffee-content .price {
+    flex: 0 1 52%;
     margin: 0;
-    white-space: nowrap;
+    white-space: normal;
     font-size: 18px;
+    line-height: 1.25;
 }
 
 .empty-category {
