@@ -360,49 +360,49 @@
         "nome": "Adagio",
         "descrizione": "Insalata verde, bresaola, grana, pomodorini e noci",
         "prezzo": "11,00 €",
-        "immagine": "images/insalatone/adagio.webp"
+        "immagine": "images/insalatone/adagio.webp?v=20260817-inscrop1"
       },
       {
         "nome": "Andante",
         "descrizione": "Insalata verde, tagliata di pollo, mais, pomodorini, mozzarella e olive",
         "prezzo": "11,00 €",
-        "immagine": "images/insalatone/andante.webp"
+        "immagine": "images/insalatone/andante.webp?v=20260817-inscrop1"
       },
       {
         "nome": "Serenata",
         "descrizione": "Insalata verde, salmone affumicato, pomodorini, capperi e mais",
         "prezzo": "12,00 €",
-        "immagine": "images/insalatone/serenata.webp"
+        "immagine": "images/insalatone/serenata.webp?v=20260817-inscrop1"
       },
       {
         "nome": "Notturno",
         "descrizione": "Insalata verde, speck, pere, scamorza affumicata e noci",
         "prezzo": "11,00 €",
-        "immagine": "images/insalatone/notturno.webp"
+        "immagine": "images/insalatone/notturno.webp?v=20260817-inscrop1"
       },
       {
         "nome": "Rapsodia",
         "descrizione": "Misticanza, mozzarella, pomodorini, carciofi e olive",
         "prezzo": "9,50 €",
-        "immagine": "images/insalatone/rapsodia.webp"
+        "immagine": "images/insalatone/rapsodia.webp?v=20260817-inscrop1"
       },
       {
         "nome": "Sinfonia",
         "descrizione": "Insalata verde, tonno, mozzarella, olive, capperi e peperoni",
         "prezzo": "10,00 €",
-        "immagine": "images/insalatone/sinfonia.webp"
+        "immagine": "images/insalatone/sinfonia.webp?v=20260817-inscrop1"
       },
       {
         "nome": "Arpeggio",
         "descrizione": "Edamer, patate, fagiolini, carote, spinaci lessati e prosciutto cotto a dadini",
         "prezzo": "10,00 €",
-        "immagine": "images/insalatone/arpeggio.webp"
+        "immagine": "images/insalatone/arpeggio.webp?v=20260817-inscrop1"
       },
       {
         "nome": "Ballata",
         "descrizione": "Insalata verde, carote alla julienne, pomodori, finocchi, zucchine a rondelle marinate al limone e mozzarella",
         "prezzo": "9,50 €",
-        "immagine": "images/insalatone/ballata.webp"
+        "immagine": "images/insalatone/ballata.webp?v=20260817-inscrop1"
       }
     ],
     "panini": [
