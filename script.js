@@ -40,9 +40,24 @@ const categoryLabels = {
     dessert: "DESSERT"
 };
 
+const productImages = {
+    secondi: {
+        "Carne tonnata": "images/secondi/carne-tonnata.webp",
+        "Cotoletta alla milanese": "images/secondi/cotoletta-alla-milanese.webp",
+        "Hamburger di manzo alla griglia": "images/secondi/hamburger-manzo-griglia.webp",
+        "Scaloppe al vino bianco": "images/secondi/scaloppine-vino-bianco.webp",
+        "Scaloppe al limone": "images/secondi/scaloppine-limone.webp",
+        "Scaloppe ai funghi": "images/secondi/scaloppine-funghi.webp",
+        "Scaloppe agli asparagi": "images/secondi/scaloppine-asparagi.webp",
+        "Melanzane alla parmigiana": "images/secondi/melanzane-parmigiana.webp",
+        "Bresaola rucola e grana": "images/secondi/bresaola-rucola-grana.webp",
+        "Crudo e melone": "images/secondi/crudo-melone.webp"
+    }
+};
+
 let menuData = null;
 
-fetch("menu.json?v=20260817-insalatone-orari1")
+fetch("menu.json?v=20260817-secondi1")
 .then(response => response.json())
 .then(menu => {
     menuData = menu;
@@ -136,7 +151,10 @@ function showCategory(category, menu) {
         </div>
     `;
 
-    const items = menu.categorie[category] || [];
+    const items = (menu.categorie[category] || []).map(product => ({
+        ...product,
+        immagine: product.immagine || productImages[category]?.[product.nome] || ""
+    }));
 
     if(items.length) {
         items.forEach(product => {
