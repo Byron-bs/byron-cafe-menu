@@ -42,7 +42,7 @@ const categoryLabels = {
 
 let menuData = null;
 
-fetch("menu.json?v=20260817-bar-menu1")
+fetch("menu.json?v=20260817-insalatone-orari1")
 .then(response => response.json())
 .then(menu => {
     menuData = menu;

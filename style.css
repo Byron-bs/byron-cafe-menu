@@ -48,11 +48,75 @@ button {
     cursor: pointer;
 }
 
-footer {
+.site-footer {
+    margin: 34px -22px -30px;
+    border-top: 1px solid rgba(117, 81, 60, .16);
+    padding: 30px 24px 24px;
+    background: #f6ece3;
+    color: var(--espresso);
+    text-align: center;
+}
+
+.opening-hours {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.hours-kicker {
+    color: var(--sage-dark);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: .18em;
+}
+
+.opening-hours h2 {
+    margin-top: 6px;
+    font-size: 29px;
+    font-weight: normal;
+}
+
+.opening-hours > p {
+    margin: 7px 0 18px;
+    color: #956d59;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.hours-list {
+    border-top: 1px solid rgba(117, 81, 60, .18);
+}
+
+.hours-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid rgba(117, 81, 60, .13);
+    padding: 8px 2px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.hours-row strong {
+    white-space: nowrap;
+    color: var(--brown);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.hours-row.closed strong {
+    color: var(--sage-dark);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.footer-brand {
     margin-top: 20px;
     color: #98785c;
-    font-size: 13px;
-    text-align: center;
+    font-size: 12px;
+    letter-spacing: .12em;
 }
 
 /* HOME E INDICI — IDENTITÀ BYRON */
@@ -81,11 +145,6 @@ body.menu-index-page .app {
     box-shadow: none;
 }
 
-body.landing-page footer,
-body.menu-index-page footer {
-    display: none;
-}
-
 body.landing-page .app::before,
 body.menu-index-page .app::before {
     content: "♪   ♫";
@@ -96,6 +155,16 @@ body.menu-index-page .app::before {
     letter-spacing: 40px;
     transform: rotate(-10deg);
     pointer-events: none;
+}
+
+body.landing-page .site-footer,
+body.menu-index-page .site-footer {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    border-top-color: rgba(117, 81, 60, .2);
+    padding: 32px clamp(24px, 7vw, 42px) 26px;
+    background: rgba(255, 250, 244, .56);
 }
 
 .home-screen {

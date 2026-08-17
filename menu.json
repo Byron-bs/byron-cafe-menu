@@ -358,43 +358,51 @@
     "insalatone": [
       {
         "nome": "Adagio",
-        "descrizione": "Misticanza, bresaola, grana, pomodorini e noci",
-        "prezzo": "11,00 €"
+        "descrizione": "Insalata verde, bresaola, grana, pomodorini e noci",
+        "prezzo": "11,00 €",
+        "immagine": "images/insalatone/adagio.webp"
       },
       {
         "nome": "Andante",
-        "descrizione": "Insalata, tagliata di pollo, mais, pomodorini, mozzarella e olive",
-        "prezzo": "11,00 €"
+        "descrizione": "Insalata verde, tagliata di pollo, mais, pomodorini, mozzarella e olive",
+        "prezzo": "11,00 €",
+        "immagine": "images/insalatone/andante.webp"
       },
       {
         "nome": "Serenata",
-        "descrizione": "Misticanza, salmone affumicato, pomodorini, capperi e mais",
-        "prezzo": "12,00 €"
+        "descrizione": "Insalata verde, salmone affumicato, pomodorini, capperi e mais",
+        "prezzo": "12,00 €",
+        "immagine": "images/insalatone/serenata.webp"
       },
       {
         "nome": "Notturno",
-        "descrizione": "Insalata, speck, pere, scamorza affumicata e noci",
-        "prezzo": "11,00 €"
+        "descrizione": "Insalata verde, speck, pere, scamorza affumicata e noci",
+        "prezzo": "11,00 €",
+        "immagine": "images/insalatone/notturno.webp"
       },
       {
         "nome": "Rapsodia",
         "descrizione": "Misticanza, mozzarella, pomodorini, carciofi e olive",
-        "prezzo": "9,50 €"
+        "prezzo": "9,50 €",
+        "immagine": "images/insalatone/rapsodia.webp"
       },
       {
         "nome": "Sinfonia",
-        "descrizione": "Insalata, tonno, mozzarella, olive, capperi e peperoni",
-        "prezzo": "10,00 €"
+        "descrizione": "Insalata verde, tonno, mozzarella, olive, capperi e peperoni",
+        "prezzo": "10,00 €",
+        "immagine": "images/insalatone/sinfonia.webp"
       },
       {
         "nome": "Arpeggio",
-        "descrizione": "Patate, fagiolini, carote, spinaci lessati, edamer e prosciutto cotto a dadini (disponibile solo in stagione)",
-        "prezzo": "10,00 €"
+        "descrizione": "Edamer, patate, fagiolini, carote, spinaci lessati e prosciutto cotto a dadini",
+        "prezzo": "10,00 €",
+        "immagine": "images/insalatone/arpeggio.webp"
       },
       {
         "nome": "Ballata",
-        "descrizione": "Insalata, carote, pomodori, finocchi, zucchine a carpaccio al limone e mozzarella",
-        "prezzo": "9,50 €"
+        "descrizione": "Insalata verde, carote alla julienne, pomodori, finocchi, zucchine a rondelle marinate al limone e mozzarella",
+        "prezzo": "9,50 €",
+        "immagine": "images/insalatone/ballata.webp"
       }
     ],
     "panini": [
