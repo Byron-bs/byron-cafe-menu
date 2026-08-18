@@ -191,7 +191,8 @@
       {
         "nome": "Garganelli panna e salmone",
         "descrizione": "",
-        "prezzo": ""
+        "prezzo": "",
+        "immagine": "images/primi/garganelli-panna-salmone.webp?v=20260818-primi2"
       },
       {
         "nome": "Pappardelle ai funghi",
@@ -310,17 +311,20 @@
       {
         "nome": "Crespelle prosciutto e formaggio",
         "descrizione": "",
-        "prezzo": ""
+        "prezzo": "",
+        "immagine": "images/primi/crespelle-prosciutto-formaggio.webp?v=20260818-primi2"
       },
       {
         "nome": "Crespelle al salmone",
         "descrizione": "",
-        "prezzo": ""
+        "prezzo": "",
+        "immagine": "images/primi/crespelle-salmone.webp?v=20260818-primi2"
       },
       {
         "nome": "Crespelle ai funghi",
         "descrizione": "",
-        "prezzo": ""
+        "prezzo": "",
+        "immagine": "images/primi/crespelle-funghi.webp?v=20260818-primi2"
       }
     ],
     "secondi": [
