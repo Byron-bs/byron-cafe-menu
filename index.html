@@ -1,65 +1,36 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BYRON Caffè</title>
-<link rel="stylesheet" href="style.css?v=20260817-insalatone-orari1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f8f4ed">
+    <meta name="description" content="Menù digitale BYRON CAFFE' — JML GROUP SNC">
+    <title>BYRON CAFFE' | Menù</title>
+    <link rel="stylesheet" href="style.css?v=20260818-restyle1">
 </head>
-<body class="landing-page">
-<div class="app">
-
-<main id="home" class="home-screen">
-    <div class="home-choice home-choice-top">
-        <button class="gateway-button" data-section="bar" type="button">
-            <span class="gateway-copy">
-                <strong>IL BAR</strong>
-                <em>Caffetteria, vini e bevande</em>
-                <small>SCOPRI IL MENU</small>
-            </span>
-            <span class="gateway-arrow" aria-hidden="true">→</span>
-        </button>
+<body>
+    <div class="app-shell">
+        <main id="home" class="view home-view" aria-live="polite"></main>
+        <main id="section-menu" class="view hidden" aria-live="polite"></main>
+        <main id="products" class="view hidden" aria-live="polite"></main>
+        <main id="contact" class="view hidden" aria-live="polite"></main>
     </div>
 
-    <header class="brand brand-home" aria-label="BYRON Caffè">
-        <h1>BYRON</h1>
-        <div class="brand-caffe"><span></span><h2>Caffè</h2><span></span></div>
-        <div class="brand-ornament" aria-hidden="true"><i></i></div>
-    </header>
-
-    <div class="home-choice home-choice-bottom">
-        <button class="gateway-button" data-section="cucina" type="button">
-            <span class="gateway-copy">
-                <strong>LA CUCINA</strong>
-                <em>Primi, secondi e proposte veloci</em>
-                <small>SCOPRI IL MENU</small>
-            </span>
-            <span class="gateway-arrow" aria-hidden="true">→</span>
-        </button>
+    <div id="menu-overlay" class="menu-overlay hidden" aria-hidden="true">
+        <button class="menu-backdrop" data-close-menu aria-label="Chiudi il menù"></button>
+        <nav class="menu-drawer" aria-label="Navigazione principale">
+            <button class="drawer-close" data-close-menu aria-label="Chiudi">×</button>
+            <div class="drawer-brand">
+                <strong>BYRON CAFFE'</strong>
+                <span>JML GROUP SNC</span>
+            </div>
+            <button data-destination="home">HOME</button>
+            <button data-destination="bar">IL BAR</button>
+            <button data-destination="cucina">LA CUCINA</button>
+            <button data-destination="dove-siamo">DOVE SIAMO</button>
+        </nav>
     </div>
-</main>
 
-<section id="section-menu" class="section-screen hidden" aria-live="polite"></section>
-<section id="products" class="hidden"></section>
-
-<footer class="site-footer">
-    <section class="opening-hours" aria-labelledby="hours-title">
-        <span class="hours-kicker">DAL MARTEDÌ AL SABATO</span>
-        <h2 id="hours-title">I nostri orari</h2>
-        <p>Ti aspettiamo dalla colazione all’aperitivo.</p>
-        <div class="hours-list">
-            <div class="hours-row closed"><span>Lunedì</span><strong>Chiuso</strong></div>
-            <div class="hours-row"><span>Martedì</span><strong>8:30 – 19:00</strong></div>
-            <div class="hours-row"><span>Mercoledì</span><strong>8:30 – 19:00</strong></div>
-            <div class="hours-row"><span>Giovedì</span><strong>8:30 – 19:00</strong></div>
-            <div class="hours-row"><span>Venerdì</span><strong>8:30 – 19:00</strong></div>
-            <div class="hours-row"><span>Sabato</span><strong>8:30 – 19:00</strong></div>
-            <div class="hours-row closed"><span>Domenica</span><strong>Chiuso</strong></div>
-        </div>
-        <div class="footer-brand">BYRON Caffè</div>
-    </section>
-</footer>
-</div>
-<script src="script.js?v=20260818-primi2"></script>
+    <script src="script.js?v=20260818-restyle1"></script>
 </body>
 </html>
