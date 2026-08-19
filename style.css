@@ -526,6 +526,10 @@ svg {
     object-position: center 66%;
 }
 
+.food-blur {
+    display: none;
+}
+
 .food-fade {
     position: absolute;
     z-index: 1;
@@ -584,6 +588,71 @@ svg {
 .food-card.no-image .food-copy {
     width: 100%;
     min-height: 110px;
+}
+
+/* Secondi: impaginazione dedicata come nella bozza approvata */
+
+.category-secondi .food-products {
+    gap: 18px;
+}
+
+.category-secondi .secondi-card {
+    height: 244px;
+    min-height: 244px;
+    background: var(--paper);
+}
+
+.category-secondi .secondi-card .food-blur {
+    position: absolute;
+    z-index: 0;
+    inset: -16px;
+    display: block;
+    overflow: hidden;
+}
+
+.category-secondi .secondi-card .food-blur img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 69%;
+    filter: blur(13px) saturate(.78) brightness(1.05);
+    transform: scale(1.09);
+}
+
+.category-secondi .secondi-card .food-photo {
+    z-index: 1;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0 37%, rgba(0,0,0,.25) 44%, #000 57% 100%);
+    mask-image: linear-gradient(90deg, transparent 0 37%, rgba(0,0,0,.25) 44%, #000 57% 100%);
+}
+
+.category-secondi .secondi-card .food-photo img {
+    object-position: center 69%;
+}
+
+.category-secondi .secondi-card .food-fade {
+    z-index: 2;
+    background: linear-gradient(90deg, var(--paper) 0 35%, rgba(255,253,249,.98) 41%, rgba(255,253,249,.78) 48%, rgba(255,253,249,.25) 57%, transparent 66%);
+}
+
+.category-secondi .secondi-card .food-copy {
+    z-index: 3;
+    width: 43%;
+    min-height: 244px;
+    padding: 24px 10px 24px 20px;
+}
+
+.category-secondi .secondi-card .food-copy h2 {
+    max-width: 100%;
+    font-size: clamp(20px, 5.55vw, 28px);
+    line-height: 1.13;
+    overflow-wrap: normal;
+    hyphens: auto;
+}
+
+.category-secondi .secondi-card .food-copy h2::after {
+    margin-top: 16px;
 }
 
 /* Panini */

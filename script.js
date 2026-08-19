@@ -190,9 +190,11 @@ function renderTextCard(product) {
     `;
 }
 
-function renderFoodCard(product) {
+function renderFoodCard(product, category) {
+    const isSecondo = category === "secondi";
     return `
-        <article class="food-card${product.immagine ? " has-image" : " no-image"}">
+        <article class="food-card${product.immagine ? " has-image" : " no-image"}${isSecondo ? " secondi-card" : ""}">
+            ${product.immagine && isSecondo ? `<div class="food-blur" aria-hidden="true"><img src="${product.immagine}" alt="" loading="lazy" decoding="async"></div>` : ""}
             ${product.immagine ? `<div class="food-photo"><img src="${product.immagine}" alt="${product.nome}" loading="lazy" decoding="async"></div>` : ""}
             <div class="food-fade" aria-hidden="true"></div>
             <div class="food-copy">
@@ -258,7 +260,7 @@ function showCategory(category) {
     } else if (textOnlyCategories.has(category)) {
         content = `<section class="products-list text-products">${items.map(renderTextCard).join("")}</section>`;
     } else {
-        content = `<section class="products-list food-products">${items.map(renderFoodCard).join("")}</section>`;
+        content = `<section class="products-list food-products">${items.map(product => renderFoodCard(product, category)).join("")}</section>`;
     }
 
     const section = barCategories.includes(category) ? "bar" : "cucina";
