@@ -63,7 +63,7 @@ const productImages = {
 };
 
 const secondiCardImages = {
-    "Carne tonnata": "images/secondi/cards/carne-tonnata.webp?v=20260821-card2",
+    "Carne tonnata": "images/secondi/cards/carne-tonnata-reference.png?v=20260821-reference1",
     "Cotoletta alla milanese": "images/secondi/cards/cotoletta-alla-milanese.webp?v=20260821-card2",
     "Hamburger di manzo alla griglia": "images/secondi/cards/hamburger-manzo-griglia.webp?v=20260821-card2",
     "Scaloppe al vino bianco": "images/secondi/cards/scaloppine-vino-bianco.webp?v=20260821-card2",
