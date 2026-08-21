@@ -63,16 +63,16 @@ const productImages = {
 };
 
 const secondiCardImages = {
-    "Carne tonnata": "images/secondi/cards/carne-tonnata.webp?v=20260821-card1",
-    "Cotoletta alla milanese": "images/secondi/cards/cotoletta-alla-milanese.webp?v=20260821-card1",
-    "Hamburger di manzo alla griglia": "images/secondi/cards/hamburger-manzo-griglia.webp?v=20260821-card1",
-    "Scaloppe al vino bianco": "images/secondi/cards/scaloppine-vino-bianco.webp?v=20260821-card1",
-    "Scaloppe al limone": "images/secondi/cards/scaloppine-limone.webp?v=20260821-card1",
-    "Scaloppe ai funghi": "images/secondi/cards/scaloppine-funghi.webp?v=20260821-card1",
-    "Scaloppe agli asparagi": "images/secondi/cards/scaloppine-asparagi.webp?v=20260821-card1",
-    "Melanzane alla parmigiana": "images/secondi/cards/melanzane-parmigiana.webp?v=20260821-card1",
-    "Bresaola rucola e grana": "images/secondi/cards/bresaola-rucola-grana.webp?v=20260821-card1",
-    "Crudo e melone": "images/secondi/cards/crudo-melone.webp?v=20260821-card1"
+    "Carne tonnata": "images/secondi/cards/carne-tonnata.webp?v=20260821-card2",
+    "Cotoletta alla milanese": "images/secondi/cards/cotoletta-alla-milanese.webp?v=20260821-card2",
+    "Hamburger di manzo alla griglia": "images/secondi/cards/hamburger-manzo-griglia.webp?v=20260821-card2",
+    "Scaloppe al vino bianco": "images/secondi/cards/scaloppine-vino-bianco.webp?v=20260821-card2",
+    "Scaloppe al limone": "images/secondi/cards/scaloppine-limone.webp?v=20260821-card2",
+    "Scaloppe ai funghi": "images/secondi/cards/scaloppine-funghi.webp?v=20260821-card2",
+    "Scaloppe agli asparagi": "images/secondi/cards/scaloppine-asparagi.webp?v=20260821-card2",
+    "Melanzane alla parmigiana": "images/secondi/cards/melanzane-parmigiana.webp?v=20260821-card2",
+    "Bresaola rucola e grana": "images/secondi/cards/bresaola-rucola-grana.webp?v=20260821-card2",
+    "Crudo e melone": "images/secondi/cards/crudo-melone.webp?v=20260821-card2"
 };
 
 const textOnlyCategories = new Set(["caffetteria", "bevande", "aperitivi", "birre", "liquori", "dessert"]);
