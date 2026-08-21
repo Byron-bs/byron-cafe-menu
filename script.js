@@ -62,6 +62,19 @@ const productImages = {
     }
 };
 
+const secondiCardImages = {
+    "Carne tonnata": "images/secondi/cards/carne-tonnata.webp?v=20260821-card1",
+    "Cotoletta alla milanese": "images/secondi/cards/cotoletta-alla-milanese.webp?v=20260821-card1",
+    "Hamburger di manzo alla griglia": "images/secondi/cards/hamburger-manzo-griglia.webp?v=20260821-card1",
+    "Scaloppe al vino bianco": "images/secondi/cards/scaloppine-vino-bianco.webp?v=20260821-card1",
+    "Scaloppe al limone": "images/secondi/cards/scaloppine-limone.webp?v=20260821-card1",
+    "Scaloppe ai funghi": "images/secondi/cards/scaloppine-funghi.webp?v=20260821-card1",
+    "Scaloppe agli asparagi": "images/secondi/cards/scaloppine-asparagi.webp?v=20260821-card1",
+    "Melanzane alla parmigiana": "images/secondi/cards/melanzane-parmigiana.webp?v=20260821-card1",
+    "Bresaola rucola e grana": "images/secondi/cards/bresaola-rucola-grana.webp?v=20260821-card1",
+    "Crudo e melone": "images/secondi/cards/crudo-melone.webp?v=20260821-card1"
+};
+
 const textOnlyCategories = new Set(["caffetteria", "bevande", "aperitivi", "birre", "liquori", "dessert"]);
 const kitchenCategories = ["primi", "secondi", "insalatone", "panini"];
 const barCategories = ["caffetteria", "bevande", "aperitivi", "birre", "liquori"];
@@ -190,11 +203,9 @@ function renderTextCard(product) {
     `;
 }
 
-function renderFoodCard(product, category) {
-    const isSecondo = category === "secondi";
+function renderFoodCard(product) {
     return `
-        <article class="food-card${product.immagine ? " has-image" : " no-image"}${isSecondo ? " secondi-card" : ""}">
-            ${product.immagine && isSecondo ? `<div class="food-blur" aria-hidden="true"><img src="${product.immagine}" alt="" loading="lazy" decoding="async"></div>` : ""}
+        <article class="food-card${product.immagine ? " has-image" : " no-image"}">
             ${product.immagine ? `<div class="food-photo"><img src="${product.immagine}" alt="${product.nome}" loading="lazy" decoding="async"></div>` : ""}
             <div class="food-fade" aria-hidden="true"></div>
             <div class="food-copy">
@@ -202,6 +213,16 @@ function renderFoodCard(product, category) {
                 ${product.descrizione ? `<p>${product.descrizione}</p>` : ""}
                 ${product.prezzo ? `<strong>${product.prezzo}</strong>` : ""}
             </div>
+        </article>
+    `;
+}
+
+function renderSecondiCard(product) {
+    const image = secondiCardImages[product.nome];
+    return `
+        <article class="secondi-composite-card">
+            <img src="${image}" alt="${product.nome}" loading="lazy" decoding="async">
+            <span class="sr-only">${product.nome}</span>
         </article>
     `;
 }
@@ -257,10 +278,12 @@ function showCategory(category) {
     let content = "";
     if (category === "panini") {
         content = `${paniniVariants()}<section class="products-list panini-list">${items.map(renderPanino).join("")}</section>`;
+    } else if (category === "secondi") {
+        content = `<section class="products-list secondi-products">${items.map(renderSecondiCard).join("")}</section>`;
     } else if (textOnlyCategories.has(category)) {
         content = `<section class="products-list text-products">${items.map(renderTextCard).join("")}</section>`;
     } else {
-        content = `<section class="products-list food-products">${items.map(product => renderFoodCard(product, category)).join("")}</section>`;
+        content = `<section class="products-list food-products">${items.map(renderFoodCard).join("")}</section>`;
     }
 
     const section = barCategories.includes(category) ? "bar" : "cucina";
